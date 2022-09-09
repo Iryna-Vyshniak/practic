@@ -530,7 +530,9 @@ img {
 }
 
 /* ================= BARBERS ==================================== */
-
+.barbers{
+  background: #F7F7F7;
+}
 .barbers-pre-title {
   margin-bottom: var(--typical-margin);
 
