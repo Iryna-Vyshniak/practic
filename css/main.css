@@ -962,7 +962,7 @@ img {
   resize: none;
   padding: 10px;
 }
-.modal-form__textarea:focus, .modal-form__textarea:focus-visible, .modal-form__textarea:hover {
+.modal-form__textarea:focus, .modal-form__textarea:focus-visible, .modal-form__textarea:hover, .modal-form__textarea:not(:focus):not(:placeholder-shown):valid {
   border: 1px solid #ff6c00;
 }
 
@@ -1008,10 +1008,12 @@ img {
 
 .policy__checkbox:checked + * .policy__icon-square {
   opacity: 0;
+  transition: opacity 250ms linear;
 }
 
 .policy__checkbox:checked + * .policy__icon-check {
   opacity: 1;
+  transition: opacity 250ms linear;
 }
 
 .policy__link {
