@@ -3,7 +3,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #82593c5f;
+    background-color: #aeacab5f;
     transition: opacity 300ms linear, visibility 300ms linear;
 }
 
@@ -73,6 +73,8 @@
 
 }
 
+// modal form
+
 .modal__title {
     @include fonts(600, 20, 1.67, 0.02);
     color: $secondary-title-color;
@@ -106,13 +108,6 @@
     &:hover {
     outline: none;
     border: 1px solid $accent-color;
-    &:checked .modal-form__icon {
-            position: absolute;
-            top: 100%;
-            left: 30px;
-            transform: translateY(-50%);
-            margin-bottom: 5px;
-              }
 }
 }
 
@@ -121,10 +116,10 @@
     top: 50%;
     left: 30px;
     transform: translateY(-50%);
-    .modal-form__input:focus-within + & {
-            transform: translateY(-42px) translateX(-30px);
-            margin-bottom: 5px;
-            margin-left: 0;
+    .modal-form__input:focus-within + &,
+    .modal-form__input:not(:placeholder-shown) + &,
+    .modal-form__input:checked + & {
+            transform: translateY(-45px) translateX(-30px);
             color: $accent-color;
             transition: transform 250ms linear;
         }
@@ -148,11 +143,24 @@
 
 .modal-form__input:not(:focus):not(:placeholder-shown):valid {
     outline: none;
-    border: 1px solid $accent-color;
+    outline: 1px solid $accent-color;
+    & + .modal-form__label {
+            color: $accent-color;
+        }
+    & ~ .modal-form__icon {
+            fill: $accent-color;
+        }
 }
 
 .modal-form__input:not(:focus):not(:placeholder-shown):invalid {
-    border: 1px solid red;
+    outline: 1px solid $form-invalid;
+    box-shadow: 0px 0px 5px $form-invalid;
+    & + .modal-form__label {
+        color: $form-invalid;  
+    }
+    & ~ .modal-form__icon{
+        fill: $form-invalid;
+        }
 }
 
 .modal-form__comment{
@@ -182,11 +190,12 @@ font-size: 14px;
 
 .modal-form__label-comment{
     position: absolute;
-        top: 0;
-        left: 0;
+    top: 0;
+    left: 0;
 
     margin-left: 10px;
-    .modal-form__textarea:focus-within + & {
+    .modal-form__textarea:focus-within + &,
+    .modal-form__textarea:not(:placeholder-shown) + & {
         transform: translateY(-20px);
         margin-bottom: 5px;
         margin-left: 0;
@@ -196,42 +205,47 @@ font-size: 14px;
 }
 
 
+// policy agreement
+.policy{
+    display: flex;
+    align-items: center;
+    color: $secondary-title-color;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
 
-
-.policy-label {
+.policy__label {
     cursor: pointer;
 }
 
-.policy-label__form-icon {
-    width: 16px;
-    height: 16px;
-    border-radius: 2px;
-    margin-right: 7px;
-    border: 1px solid black;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.policy__icon {
+        display: block;
+        margin-right: 7px;
 }
 
-.policy-label__icon-check {
-    font-size: 16px;
-    height: auto;
-    fill: white;
-    stroke: white;
-    stroke-width: 2px;
+.policy__icon-square{
+    opacity: 1;
+    fill: currentColor;
 }
 
-.policy-label__checkbox:checked + * .policy-label__icon-check {
-    background-color: blue;
-    border-color: blue;
+.policy__icon-check {
+    opacity: 0;
 }
 
-.policy-label__link {
+.policy__checkbox:checked + * .policy__icon-square {
+    opacity: 0;
+}
+
+.policy__checkbox:checked + * .policy__icon-check{
+    opacity: 1
+}
+
+.policy__link {
     position: relative;
-    color: blue;
+    color: $accent-color;
 }
 
-.policy-label__link:after {
+.policy__link:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -243,7 +257,7 @@ font-size: 14px;
     transform: 0.3s ease width;
 }
 
-.policy-label__link:hover:after {
+.policy__link:hover:after {
     width: 0;
 }
 

@@ -537,6 +537,7 @@
               autofocus
               autocomplete="name"
               minlength="3"
+              placeholder=" "
             />
             <label class="modal-form__label" for="name">Ім'я</label>
             <svg class="modal-form__icon" width="18" height="18">
@@ -551,6 +552,7 @@
               name="tel"
               id="tel"
               pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              placeholder=" "
             />
             <label class="modal-form__label" for="tel">Телефон</label>
             <svg class="modal-form__icon" width="18" height="18">
@@ -559,13 +561,7 @@
           </div>
           <!-- input email -->
           <div class="modal-form__field">
-            <input
-              class="modal-form__input"
-              type="email"
-              name="email"
-              id="email"
-              autocomplete="on"
-            />
+            <input class="modal-form__input" type="email" name="email" id="email" placeholder=" " />
             <label class="modal-form__label" for="email">Пошта</label>
             <svg class="modal-form__icon" width="18" height="18">
               <use href="./img/icons/icons.svg#icon-email"></use>
@@ -573,32 +569,37 @@
           </div>
           <!-- field-comment -->
           <div class="modal-form__comment">
-            <textarea class="modal-form__textarea" name="comment" id="comment"></textarea>
+            <textarea
+              class="modal-form__textarea"
+              name="comment"
+              id="comment"
+              placeholder=" "
+            ></textarea>
             <label class="modal-form__label-comment" for="comment">Коментар</label>
           </div>
 
           <!-- policy-label -->
-          <label class="policy-label" for="policy">
+          <div class="policy">
             <input
-              class="policy-label__checkbox vissually-hidden"
+              class="policy__checkbox vissually-hidden"
               type="checkbox"
               name="policy"
               id="policy"
               aria-label="Згода з умовами договору"
               value="true"
             />
-
-            <span class="policy-label__form-icon">
-              <svg class="policy-label__icon" width="16" height="15">
-                <use
-                  сlass="policy-label__icon-check"
-                  href="./images/icons.svg#icon-icon-white-check"
-                ></use>
-              </svg>
-            </span>
-            Погоджуюся з розсилкою та приймаю
-            <a href="#" class="policy-label__link link"> Умови договору</a>
-          </label>
+            <svg class="policy__icon" width="16" height="15">
+              <use class="policy__icon-square" href="./img/icons/icons.svg#icon-black-square"></use>
+              <use
+                class="policy__icon-check"
+                href="./img/icons/icons.svg#icon-blue-white-check"
+              ></use>
+            </svg>
+            <label class="policy__label" for="policy">
+              Погоджуюся з розсилкою та приймаю
+              <a href="#" class="policy__link link"> Умови договору</a>
+            </label>
+          </div>
 
           <button class="btn btn--color-dark form__btn" type="submit">Відправити</button>
         </form>

@@ -749,6 +749,7 @@ img {
 .footer__container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer__text {
@@ -778,6 +779,13 @@ img {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+  transition: color 300ms linear;
+}
+.footer__link:focus, .footer__link:hover {
+  color: #ff6c00;
+}
+.footer__link:focus .footer__list::before, .footer__link:hover .footer__list::before {
+  background-color: currentColor;
 }
 
 .footer__item:not(:last-child) {
@@ -789,7 +797,7 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(130, 89, 60, 0.3725490196);
+  background-color: rgba(174, 172, 171, 0.3725490196);
   transition: opacity 300ms linear, visibility 300ms linear;
 }
 
@@ -887,13 +895,6 @@ img {
   outline: none;
   border: 1px solid #ff6c00;
 }
-.modal-form__input:focus:checked .modal-form__icon, .modal-form__input:focus-visible:checked .modal-form__icon, .modal-form__input:hover:checked .modal-form__icon {
-  position: absolute;
-  top: 100%;
-  left: 30px;
-  transform: translateY(-50%);
-  margin-bottom: 5px;
-}
 
 .modal-form__label {
   position: absolute;
@@ -901,10 +902,8 @@ img {
   left: 30px;
   transform: translateY(-50%);
 }
-.modal-form__input:focus-within + .modal-form__label {
-  transform: translateY(-42px) translateX(-30px);
-  margin-bottom: 5px;
-  margin-left: 0;
+.modal-form__input:focus-within + .modal-form__label, .modal-form__input:not(:placeholder-shown) + .modal-form__label, .modal-form__input:checked + .modal-form__label {
+  transform: translateY(-45px) translateX(-30px);
   color: #ff6c00;
   transition: transform 250ms linear;
 }
@@ -925,11 +924,24 @@ img {
 
 .modal-form__input:not(:focus):not(:placeholder-shown):valid {
   outline: none;
-  border: 1px solid #ff6c00;
+  outline: 1px solid #ff6c00;
+}
+.modal-form__input:not(:focus):not(:placeholder-shown):valid + .modal-form__label {
+  color: #ff6c00;
+}
+.modal-form__input:not(:focus):not(:placeholder-shown):valid ~ .modal-form__icon {
+  fill: #ff6c00;
 }
 
 .modal-form__input:not(:focus):not(:placeholder-shown):invalid {
-  border: 1px solid red;
+  outline: 1px solid #FF0000;
+  box-shadow: 0px 0px 5px #FF0000;
+}
+.modal-form__input:not(:focus):not(:placeholder-shown):invalid + .modal-form__label {
+  color: #FF0000;
+}
+.modal-form__input:not(:focus):not(:placeholder-shown):invalid ~ .modal-form__icon {
+  fill: #FF0000;
 }
 
 .modal-form__comment {
@@ -960,7 +972,7 @@ img {
   left: 0;
   margin-left: 10px;
 }
-.modal-form__textarea:focus-within + .modal-form__label-comment {
+.modal-form__textarea:focus-within + .modal-form__label-comment, .modal-form__textarea:not(:placeholder-shown) + .modal-form__label-comment {
   transform: translateY(-20px);
   margin-bottom: 5px;
   margin-left: 0;
@@ -968,40 +980,46 @@ img {
   transition: transform 250ms linear;
 }
 
-.policy-label {
+.policy {
+  display: flex;
+  align-items: center;
+  color: #303030;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.policy__label {
   cursor: pointer;
 }
 
-.policy-label__form-icon {
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
+.policy__icon {
+  display: block;
   margin-right: 7px;
-  border: 1px solid black;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.policy-label__icon-check {
-  font-size: 16px;
-  height: auto;
-  fill: white;
-  stroke: white;
-  stroke-width: 2px;
+.policy__icon-square {
+  opacity: 1;
+  fill: currentColor;
 }
 
-.policy-label__checkbox:checked + * .policy-label__icon-check {
-  background-color: blue;
-  border-color: blue;
+.policy__icon-check {
+  opacity: 0;
 }
 
-.policy-label__link {
+.policy__checkbox:checked + * .policy__icon-square {
+  opacity: 0;
+}
+
+.policy__checkbox:checked + * .policy__icon-check {
+  opacity: 1;
+}
+
+.policy__link {
   position: relative;
-  color: blue;
+  color: #ff6c00;
 }
 
-.policy-label__link:after {
+.policy__link:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1013,7 +1031,7 @@ img {
   transform: 0.3s ease width;
 }
 
-.policy-label__link:hover:after {
+.policy__link:hover:after {
   width: 0;
 }
 
