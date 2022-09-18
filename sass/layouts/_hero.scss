@@ -1,0 +1,33 @@
+.hero__container {
+    display: flex;
+}
+
+.hero__content {
+    padding: 272px 100px 208px;
+    background-color: #8c8888;
+    flex-grow: 1;
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), 
+    rgba(25, 28, 38, 0.2)),
+        url(../img/hero-bg.jpg);
+    /* background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center; */
+}
+
+.hero__pre-title {
+    margin-bottom: $typical-margin;
+}
+
+.hero__title {
+    margin-bottom: $typical-margin;
+
+    font-family: 'Raleway', sans-serif;
+    @include fonts(700, 72, 1.18, 0.05);
+    color: $first-title-color;
+}
+
+.hero__after-title {
+    /* write 360 not 357 */
+    max-width: 360px;
+    color: #9da4bd;
+}

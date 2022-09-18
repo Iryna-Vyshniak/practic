@@ -1,0 +1,29 @@
+.pre-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+
+    text-transform: uppercase;
+
+    &::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+
+    background-color: currentColor;
+}
+}
+
+.pre-title--color-light{
+    color: $pre-title--color-light;
+}
+
+.pre-title--color-dark{
+    color: $pre-title--color-dark;
+}

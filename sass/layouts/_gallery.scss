@@ -1,0 +1,15 @@
+.gallery__pre-title {
+    margin-bottom: $typical-margin;
+    color: $secondary-btn-color;
+}
+
+   .gallery__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+    .gallery__item {
+            flex-basis: calc((100% - 90px) / 4);
+        }

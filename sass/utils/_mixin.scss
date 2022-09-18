@@ -1,0 +1,16 @@
+@mixin fonts ($fw, $fz, $lh, $ls){
+    font-weight: $fw;
+    font-size: $fz+px;
+    line-height: $lh;
+    letter-spacing: $ls+em;
+}
+
+@mixin circle($width: 44px, $height: 44px, $radius: 50%) {
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+}
+
+@mixin transition($property, $speed: 0.3s, $time-function: ease) {
+    transition: $property $speed $time-function;
+}

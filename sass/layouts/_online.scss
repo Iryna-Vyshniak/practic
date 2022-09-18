@@ -1,0 +1,100 @@
+.contact-wrap {
+    background-color: #191c26;
+    background-image: url(../img/contacts-bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: calc(50% - 15px);
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.wrap-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.online {
+    flex-basis: calc((100% - 30px) / 2);
+    padding-left: 16px;
+}
+
+.online__title {
+    margin-bottom: $title-margin;
+    color: $first-title-color;
+}
+
+.input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: $title-margin;
+}
+
+.form__field {
+flex-basis: calc((100% - 1 * 30px) / 2);
+}
+.form__input {
+        width: 100%;
+        padding: 8px;
+        @include fonts (600, 11, 1.4, 0.1);
+        color: $first-title-color;
+
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+        &:focus,
+        &:hover{
+            border-bottom: 1px solid $first-title-color;
+        }
+                 &:focus::placeholder,
+                 &:hover::placeholder {
+                     color: $first-title-color;
+                 }
+    }
+
+.form__input::placeholder {
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+}
+
+.form__input::placeholder::after {
+        content: "\22C6";
+        display: inline-block;
+        vertical-align: top;
+        color: currentColor;
+    }
+
+  
+.form__textarea {
+    width: 100%;
+    min-height: 76px;
+    margin-bottom: $title-margin;
+    padding: 8px;
+    resize: none;
+    @include fonts (600, 11, 1.4, 0.1);
+    color: $first-title-color;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    
+        &:focus,
+        &:hover {
+            border-bottom: 1px solid $first-title-color;
+        }
+ &:focus::placeholder,
+ &:hover::placeholder {
+     color: $first-title-color;
+ }
+
+}
+
+.form__textarea::placeholder {
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+    &::after {
+        content: "\22C6";
+        display: inline-block;
+        vertical-align: top;
+        color: currentColor;
+    }
+}

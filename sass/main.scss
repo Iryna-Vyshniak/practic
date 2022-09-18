@@ -1,0 +1,27 @@
+@import "./utils/vars";
+@import "./utils/mixin";
+@import "./utils/placeholder";
+@import "./utils/commons";
+@import "./utils/hidden";
+
+@import "./components/container";
+@import "./components/section";
+@import "./components/btn";
+@import "./components/logo";
+@import "./components/social";
+@import "./components/pre-title";
+@import "./components/title";
+@import "./components/sns-list";
+
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/about";
+@import "./layouts/prices";
+@import "./layouts/benefits";
+@import "./layouts/barbers";
+@import "./layouts/gallery";
+@import "./layouts/online";
+@import "./layouts/contacts";
+@import "./layouts/footer";
+
+@import "./layouts/modals";

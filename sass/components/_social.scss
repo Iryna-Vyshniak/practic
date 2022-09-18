@@ -1,0 +1,32 @@
+.social {
+    width: 100px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 27px;
+    padding-bottom: 40px;
+}
+
+.social__list {
+    display: flex;
+    transform: rotate(-90deg) translateY(100%);
+    transform-origin: bottom left;
+    align-items: center;
+    gap: 40px;
+    &::before {
+            content: '';
+            width: 60px;
+            height: 1px;
+            background-color: currentColor;
+        }
+}
+
+.social__link {
+    @include fonts(600, 11, 1.36, 0.02);
+    color: $secondary-title-color;
+    transform: transition 300ms linear;
+    &:focus,
+    &:hover{
+        color: $accent-color;
+    }
+
+}

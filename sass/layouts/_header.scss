@@ -1,0 +1,53 @@
+.header {
+    position: absolute;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-right: 20px;
+    /* background-color: transparent; */
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 131px;
+}
+
+.navigation__list {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation__link {
+    @include fonts(600, 12, 1.36, 0.01);
+    color: $first-title-color;
+    transition: color 300ms linear;
+    &:focus,
+    &:hover {
+            color: $accent-color;
+        }
+}
+
+
+.header__connect {
+    margin-left: auto;
+}  
+
+.connect__phone {
+    margin-right: 60px;
+   @include fonts(400, 12, 1.36, 0.01);
+    color: $first-title-color;
+    &:focus,
+    &:hover {
+            color: $accent-color;
+        }
+}
+
+.connect__button {
+    margin-left: 40px;
+    /* font-family important! */
+    color: $first-btn-color;
+}

@@ -1,0 +1,35 @@
+.about__container {
+    display: flex;
+    gap: 30px;
+}
+
+.picture-list {
+    display: flex;
+    gap: 30px;
+}
+
+.about__content {
+    max-width: 470px;
+}
+
+.about__pre-title {
+    margin-bottom: $typical-margin;
+   
+}
+
+.about__title {
+    margin-bottom: $typical-margin;
+    color: $secondary-title-color;
+}
+
+.about__after-title {
+    margin-bottom: $typical-margin;
+    color: #555555;
+}
+
+.about__text {
+    margin-bottom: 42px;
+    @include fonts(null, 14, 1.86, 0.02);
+    color: #555555;
+}
+

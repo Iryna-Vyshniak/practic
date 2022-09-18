@@ -1,0 +1,35 @@
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__text {
+ @include fonts(600, 11, 1.36, 0.2);
+  color: #9da4bd;
+}
+
+.footer__list {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  gap: 20px;
+  &::before {
+        content: '';
+        width: 60px;
+        height: 1px;
+
+        background-color: currentColor;
+    }
+}
+.footer__link {
+    @include fonts(600, 11, 1.36, 0.2);
+    color: $secondary-title-color;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 40px;
+}
