@@ -5,9 +5,9 @@
     letter-spacing: $ls+em;
 }
 
-@mixin circle($width: 44px, $height: 44px, $radius: 50%) {
-    width: $width;
-    height: $height;
+@mixin circle($width:44, $height:44, $radius:50%) {
+    width: $width+px;
+    height: $height+px;
     border-radius: $radius;
 }
 
