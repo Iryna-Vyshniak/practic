@@ -9,14 +9,12 @@
 
 .barbers__title {
     margin-bottom: $title-margin;
-
     color: #303030;
 }
 
 .barbers__thumb-overlay {
     position: relative;
     overflow: hidden;
-
     & > img {
             display: block;
             width: 100%;
@@ -30,13 +28,13 @@
     padding: 40px;
     width: 100%;
     height: auto;
-
     background-color: #e4711f93;
     color: $first-title-color;
 
     // transform: translateY(-100%);
     transform: scale(0) rotate(0deg);
-    transition: transform 500ms linear;
+    @include transition ();
+    transition-property: transform;
 
     .barbers__item:hover & {
             height: 100%;
@@ -66,14 +64,14 @@
 
 .barbers__item-title {
     margin-bottom: 8px;
-    @include fonts(null, 18, 1.4, 0.02);
+    @include fonts(null, 18, 1.4);
     @extend %centered;
     color: #303030;
 }
 
 .barbers__item-text {
     margin-bottom: 30px;
-    @include fonts(null, 14, 1.4, 0.02);
+    @include fonts(null, 14, 1.4);
     @extend %centered;
     color: $accent-color;
 }

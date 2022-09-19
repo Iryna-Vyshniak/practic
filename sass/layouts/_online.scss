@@ -36,12 +36,14 @@ flex-basis: calc((100% - 1 * 30px) / 2);
 .form__input {
         width: 100%;
         padding: 8px;
-        @include fonts (600, 11, 1.4, 0.1);
+        @include fonts (600, 11, 1.4, 0.1em);
         color: $first-title-color;
 
         background-color: transparent;
         border: none;
         border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+        @include transition();
+        transition-property: color;
         &:focus,
         &:hover{
             border-bottom: 1px solid $first-title-color;
@@ -57,44 +59,31 @@ flex-basis: calc((100% - 1 * 30px) / 2);
     color: rgba(157, 164, 189, 0.4);
 }
 
-.form__input::placeholder::after {
-        content: "\22C6";
-        display: inline-block;
-        vertical-align: top;
-        color: currentColor;
-    }
-
-  
 .form__textarea {
     width: 100%;
     min-height: 76px;
     margin-bottom: $title-margin;
     padding: 8px;
     resize: none;
-    @include fonts (600, 11, 1.4, 0.1);
+    @include fonts (600, 11, 1.4, 0.1em);
     color: $first-title-color;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid rgba(157, 164, 189, 0.4);
-    
+    @include transition();
+    transition-property: border-bottom-color;
         &:focus,
         &:hover {
-            border-bottom: 1px solid $first-title-color;
+            border-bottom-width: 1px;
+            border-bottom-style: solid; border-bottom-color: $first-title-color;
         }
- &:focus::placeholder,
- &:hover::placeholder {
-     color: $first-title-color;
+        &:focus::placeholder,
+        &:hover::placeholder {
+            color: $first-title-color;
  }
-
 }
 
 .form__textarea::placeholder {
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.4);
-    &::after {
-        content: "\22C6";
-        display: inline-block;
-        vertical-align: top;
-        color: currentColor;
-    }
 }

@@ -1,17 +1,45 @@
 .hero__container {
     display: flex;
-}
+    padding: 0;
+    @include mobile {
+            width: 100%;
+        }
+    @include tablet {
+            width: 720px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    @include desktop {
+            width: 1200px;
+        }
+    }
 
 .hero__content {
-    padding: 272px 100px 208px;
+    padding: 208px 31px 208px 31px;
     background-color: #8c8888;
     flex-grow: 1;
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), 
-    rgba(25, 28, 38, 0.2)),
-        url(../img/hero-bg.jpg);
-    /* background-repeat: no-repeat;
-       background-size: cover;
-       background-position: center; */
+    background-image: $bg-gradient, url(../img/hero/hero-bg-mob-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media retina {
+        background-image: $bg-gradient, url(../img/hero/hero-bg-mob@2x-min.jpg);
+    }
+
+    @include tablet {
+        padding: 272px 31px 237px 119px;
+        background-image: $bg-gradient, url(../img/hero/hero-bg-tab-min.jpg);
+        @media retina {
+            background-image: $bg-gradient, url(../img/hero/hero-bg-tab@2x-min.jpg);
+        }
+    }
+
+    @include desktop {
+        padding: 272px 100px 208px 100px;
+        background-image: $bg-gradient, url(../img/hero/hero-bg-dt-min.jpg);
+        @media retina {
+            background-image: $bg-gradient, url(../img/hero/hero-bg-dt@2x-min.jpg);
+        }
+    }
 }
 
 .hero__pre-title {
@@ -19,15 +47,26 @@
 }
 
 .hero__title {
-    margin-bottom: $typical-margin;
-
     font-family: 'Raleway', sans-serif;
-    @include fonts(700, 72, 1.18, 0.05);
+    @include fonts(700, 42, 1.18, 0.05em);
     color: $first-title-color;
+    margin-bottom: $typical-margin;
+    display: flex;
+    align-items: baseline;
+    @include mobile {
+        font-size: 48px;
+    }
+    @include desktop {
+        @include fonts(700, 72, 1.18, 0.05em);
+    }
 }
 
 .hero__after-title {
-    /* write 360 not 357 */
+  @include fonts(null, 16, 1.62);
+  color: $after-title--color-light;
+  max-width: 336px;
+  @include tablet {
+    @include fonts(null, 18, 1.67);
     max-width: 360px;
-    color: #9da4bd;
+  }
 }

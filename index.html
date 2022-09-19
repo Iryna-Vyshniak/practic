@@ -34,7 +34,10 @@
     <header class="header">
       <div class="container header__container">
         <a class="header__logo logo link" href="./index.html">
-          <img src="./img/icons/logo.svg" title="site logo" alt="site logo" width="#" height="#" />
+          <!-- <img src="./img/icons/logo.svg" title="site logo" alt="site logo" width="#" height="#" /> -->
+          <svg width="69" height="55">
+            <use class="icon-logo" href="./img/icons/icons.svg#icon-logo"></use>
+          </svg>
         </a>
         <nav class="navigation">
           <ul class="navigation__list list">
@@ -54,30 +57,83 @@
         </nav>
         <div class="header__connect connect">
           <a class="connect__phone link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn--color-light" type="button" data-modal-open>Online-booking</button>
+          <button class="btn btn--color-light connect__button" type="button" data-modal-open>
+            Online-booking
+          </button>
         </div>
+
+        <!-- burger open-mobile-menu-->
+        <button type="button" class="mobile-menu__button menu-open">
+          <svg
+            class="mobile-menu__burger"
+            width="40"
+            height="40"
+            aria-label="Перемикач мобільного меню"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <use class="mobile-menu__icon-burger" href="./img/icons/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
-    </header>
-    <!-- MAIN -->
-    <main>
-      <section class="hero">
-        <div class="container hero__container">
-          <div class="social">
-            <ul class="social__list list">
-              <li class="social__item">
+      <div class="mobile-menu is-hidden">
+        <div class="mobile-menu__container">
+          <div class="mobile-menu__top">
+            <button
+              type="button"
+              class="mobile-menu__button menu-close"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg
+                class="mobile-menu__cross"
+                width="40"
+                height="40"
+                aria-label="Перемикач мобільного меню"
+              >
+                <use class="mobile-menu__icon-cross" href="./img/icons/icons.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <nav class="mobile-menu__navigation">
+              <ul class="mobile-menu__list list">
+                <li class="mobile-menu__item">
+                  <a href="#about" class="mobile-menu__link link">About</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="#prices" class="mobile-menu__link link">Services and prices</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="#barbers" class="mobile-menu__link link">Barbers</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="#contacts" class="mobile-menu__link link">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mobile-menu__bottom">
+            <div class="mobile-menu__connect">
+              <a class="mobile-menu__tel link" href="tel:+380441111111">+38 044 111 11 11</a>
+              <button class="btn btn--color-dark mobile-menu__btn" type="button" data-modal-open>
+                Online-booking
+              </button>
+            </div>
+
+            <ul class="mobile-soc-list list">
+              <li class="mobile-soc-list__item">
                 <a
-                  class="social__link link"
-                  href="./"
+                  class="mobile-soc-list__link link"
+                  href="#"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   aria-label="link to Instagram"
                   >Instagram</a
                 >
               </li>
-              <li class="social__item">
+              <li class="mobile-soc-list__item">
                 <a
-                  class="social__link link"
-                  href="./"
+                  class="mobile-soc-list__link link"
+                  href="#"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   aria-label="link to Youtube"
@@ -86,22 +142,53 @@
               </li>
             </ul>
           </div>
-          <div class="hero__content">
-            <p class="hero__pre-title pre-title pre-title--color-light">
-              A hair salon for men in Kyiv
-            </p>
-            <h1 class="hero__title" data-aos="zoom-in">BarberShop</h1>
-            <p class="hero__after-title">
-              We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
-            </p>
-          </div>
         </div>
-      </section>
-      <!--About  -->
-      <section class="section about" id="about">
-        <div class="container about__container">
-          <!-- picture-list -->
-          <ul class="picture-list list">
+      </div>
+    </header>
+    <!-- MAIN -->
+    <!-- <main> -->
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="social">
+          <ul class="social__list list">
+            <li class="social__item">
+              <a
+                class="social__link link"
+                href="./"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="link to Instagram"
+                >Instagram</a
+              >
+            </li>
+            <li class="social__item">
+              <a
+                class="social__link link"
+                href="./"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="link to Youtube"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="hero__content">
+          <p class="hero__pre-title pre-title pre-title--color-light">
+            A hair salon for men in Kyiv
+          </p>
+          <h1 class="hero__title">BarberShop</h1>
+          <p class="hero__after-title">
+            We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--About  -->
+    <!-- <section class="section about" id="about">
+        <div class="container about__container"> -->
+    <!-- picture-list -->
+    <!-- <ul class="picture-list list">
             <li class="picture-list__item item">
               <img
                 class="picture-list__img"
@@ -122,9 +209,9 @@
                 height="445"
               />
             </li>
-          </ul>
-          <!-- about__content -->
-          <div class="about__content">
+          </ul> -->
+    <!-- about__content -->
+    <!-- <div class="about__content">
             <p class="about__pre-title pre-title pre-title--color-dark">About</p>
             <h2 class="about__title title">Best Barbershop in your city</h2>
             <p class="about__after-title">
@@ -139,9 +226,9 @@
             <button class="btn btn--color-dark" type="button">Online-booking</button>
           </div>
         </div>
-      </section>
-      <!-- Services and prices -->
-      <section class="section prices" id="prices">
+      </section> -->
+    <!-- Services and prices -->
+    <!-- <section class="section prices" id="prices">
         <div class="container prices__container">
           <p class="prices__pre-title pre-title pre-title--color-light">
             Spend your time with the best masters
@@ -188,9 +275,9 @@
           </div>
           <button class="btn btn--color-light prices__button" type="button">Online-booking</button>
         </div>
-      </section>
-      <!-- Old traditional school -->
-      <section class="section benefits">
+      </section> -->
+    <!-- Old traditional school -->
+    <!-- <section class="section benefits">
         <div class="container benefits__container">
           <ul class="benefits__list list">
             <li class="benefits__item">
@@ -221,9 +308,9 @@
             </p>
           </div>
         </div>
-      </section>
-      <!-- Our barbers -->
-      <section class="section barbers" id="barbers">
+      </section> -->
+    <!-- Our barbers -->
+    <!-- <section class="section barbers" id="barbers">
         <div class="container">
           <p class="barbers__pre-title pre-title">For true enjoyers of the atmosphere</p>
           <h2 class="barbers__title title" data-aos="flip-up">Our barbers</h2>
@@ -371,9 +458,9 @@
             </li>
           </ul>
         </div>
-      </section>
-      <!-- gallery -->
-      <section class="section gallery">
+      </section> -->
+    <!-- gallery -->
+    <!-- <section class="section gallery">
         <div class="container gallery__container">
           <p class="gallery__pre-title pre-title pre-title--color-dark">
             In Latin, "barba" means "beard"
@@ -394,13 +481,13 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
-      <!-- contacts -->
-      <div class="contact-wrap">
-        <div class="container wrap-container">
-          <!-- booking -->
-          <section class="section online">
+    <!-- contacts -->
+    <!-- <div class="contact-wrap">
+        <div class="container wrap-container"> -->
+    <!-- booking -->
+    <!-- <section class="section online">
             <h2 class="online__title title">Online-booking</h2>
             <form action="javascript:void(0);" autocomplete="off">
               <div class="input-wrap">
@@ -442,9 +529,9 @@
               </div>
               <button type="submit" class="btn btn--color-light">SEND</button>
             </form>
-          </section>
-          <!-- Contacts -->
-          <section class="section contacts" id="contacts">
+          </section> -->
+    <!-- Contacts -->
+    <!-- <section class="section contacts" id="contacts">
             <h2 class="contacts__title title">Contacts</h2>
             <address class="contacts__address">
               <a
@@ -478,12 +565,12 @@
             </address>
             <p class="contacts__subtitle pre-title pre-title--color-light">Working hours</p>
             <p class="contacts__schedule">Every day from 9:00 to 22:00</p>
-          </section>
-        </div>
+          </section> -->
+    <!-- </div>
       </div>
-    </main>
+    </main> -->
     <!-- footer -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer__container">
         <p class="footer__text">&copy; Copyright 2020</p>
         <ul class="footer__list list">
@@ -509,7 +596,7 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
     <!-- MODAL -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -517,7 +604,7 @@
           <svg class="modal__icon-close" width="20" height="20">
             <use
               class="modal__cross"
-              href="./img/icons/icons.svg#icon-close"
+              href="./img/icons/icons.svg#icon-cross"
               width="18"
               height="18"
             ></use>
@@ -607,10 +694,18 @@
     </div>
 
     <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js/menu.js"></script>
     <script src="./script.js/modal.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
-    </script>
+    </script> -->
   </body>
 </html>

@@ -23,13 +23,13 @@
         margin-top: 30px;
         }
     span {
-        @include fonts(700, 42, 1.36, 0.05);
+        @include fonts(700, 42, 1.36, 0.05em);
         color: $secondary-title-color;
         &::after {
             content: '+';
             display: inline-block;
             vertical-align: top;
-            @include fonts(600, 16, 1.4, 0.02);
+            @include fonts(600, 16, 1.4);
             color: #ff6c00;
         }   
     }
@@ -41,8 +41,8 @@
 }
 
 .benefits__item-text {
-    @include fonts(600, 11, 1.36, 0.02);
-    text-align: center;
+    @include fonts(600, 11, 1.36);
+    @extend %centered;
 
     color: #303030;
 }

@@ -29,7 +29,7 @@
 
 .about__text {
     margin-bottom: 42px;
-    @include fonts(null, 14, 1.86, 0.02);
+    @include fonts(null, 14, 1.86);
     color: #555555;
 }
 

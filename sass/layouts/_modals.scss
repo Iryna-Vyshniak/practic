@@ -4,7 +4,8 @@
     width: 100%;
     height: 100%;
     background-color: #aeacab5f;
-    transition: opacity 300ms linear, visibility 300ms linear;
+    @include transition ();
+    transition-property: opacity, visibility;
 }
 
 .modal {
@@ -20,7 +21,8 @@
     background-color: #fff;
     border-radius: 10px;
     transform: translate(-50%, -50%);
-    transition: min-height 300ms linear;
+    @include transition();
+    transition-property: min-height;
 }
 
 .is-hidden {
@@ -47,7 +49,8 @@
     border-width: 1px;
     border-style: solid;
     border-color: $secondary-btn-color;
-    transition: border-color 300ms linear, background-color 300ms linear;
+    @include transition();
+    transition-property: border-color background-color;
 }
 
 .modal__button-close:focus,
@@ -68,7 +71,8 @@
     .modal__button-close:focus > &,
     .modal__button-close:hover > & {
             fill: $first-btn-color;
-            transition: fill 300ms linear;
+            @include transition();
+            transition-property: fill;
         }
 
 }
@@ -76,7 +80,7 @@
 // modal form
 
 .modal__title {
-    @include fonts(600, 20, 1.67, 0.02);
+    @include fonts(600, 20, 1.67);
     color: $secondary-title-color;
     text-align: center;
     margin-bottom: 15px;
@@ -103,11 +107,15 @@
     border: none;
     border-radius: 5px;
     background-color: transparent;
+    @include transition();
+    transition-property: border-color;
     &:focus,
     &:focus-visible,
     &:hover {
     outline: none;
-    border: 1px solid $accent-color;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $accent-color;
 }
 }
 
@@ -121,7 +129,8 @@
     .modal-form__input:checked + & {
             transform: translateY(-45px) translateX(-30px);
             color: $accent-color;
-            transition: transform 250ms linear;
+            @include transition();
+            transition-property: transform;
         }
 }
 
@@ -137,7 +146,8 @@
     .modal-form__field:focus-within > &,
     .modal-form__input:not(:placeholder-shown) > & {
         fill: $accent-color;
-        transition: transform 250ms linear;
+        @include transition();
+        transition-property: transform;
     }
 }
 
@@ -181,11 +191,15 @@ font-size: 14px;
     background-color: transparent;
     resize: none;
     padding: 10px;
+    @include transition();
+    transition-property: border-color;
     &:focus,
     &:focus-visible,
     &:hover,
     &:not(:focus):not(:placeholder-shown):valid {
-            border: 1px solid $accent-color;
+            border-width: 1px;
+            border-style: solid;
+            border-color: $accent-color;
 }
 }
 
@@ -201,7 +215,8 @@ font-size: 14px;
         margin-bottom: 5px;
         margin-left: 0;
         color: $accent-color;
-        transition: transform 250ms linear;
+        @include transition();
+        transition-property: transform;
     }
 }
 
@@ -235,12 +250,14 @@ font-size: 14px;
 
 .policy__checkbox:checked + * .policy__icon-square {
     opacity: 0;
-    transition: opacity 250ms linear;
+    @include transition();
+    transition-property: opacity;
 }
 
 .policy__checkbox:checked + * .policy__icon-check{
     opacity: 1;
-    transition: opacity 250ms linear;
+    @include transition();
+    transition-property: opacity;
 }
 
 .policy__link {
@@ -257,7 +274,8 @@ font-size: 14px;
     width: 100%;
     height: 1px;
     background-color: currentColor;
-    transform: 0.3s ease width;
+    @include transition();
+    transition-property: width;
 }
 
 .policy__link:hover:after {

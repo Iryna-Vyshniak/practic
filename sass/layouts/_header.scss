@@ -1,19 +1,45 @@
 .header {
     position: absolute;
     width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 31px;
+
+@include tablet {
     padding-top: 32px;
     padding-bottom: 32px;
     padding-right: 20px;
-    /* background-color: transparent; */
+}  
 }
 
 .header__container {
     display: flex;
     align-items: center;
+    
 }
 
 .header__logo {
+    @include max-mobile{
+        .icon-logo{
+        fill: $first-btn-color;
+        }
+    }
+    @include tablet{
+        margin-right: 62px;
+        .icon-logo {
+            fill: $secondary-btn-color;
+            }
+    }
+    @include desktop {
     margin-right: 131px;
+    }
+}
+
+.navigation{
+    display: none;
+@include tablet {
+    display: flex;
+}
 }
 
 .navigation__list {
@@ -22,34 +48,48 @@
 }
 
 .navigation__link {
-    @include fonts(600, 12, 1.36, 0.01);
+    @include fonts(600, 12, 1.36, 0.01em);
     color: $first-title-color;
-    transition: color 300ms linear;
+    @include transition();
+    transition-property: color;
     &:focus,
     &:hover {
             color: $accent-color;
         }
 }
 
-
 .header__connect {
+    display: none;
+
+    @include tablet{
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
+    justify-content: center;
     margin-left: auto;
 }  
+@include desktop{
+    flex-direction: row;
+}
+}
 
 .connect__phone {
-    margin-right: 60px;
-   @include fonts(400, 12, 1.36, 0.01);
+    @include fonts(400, 12, 1.36, 0.01em);
     color: $first-title-color;
+    @include transition();
+    transition-property: color;
     &:focus,
     &:hover {
             color: $accent-color;
+        }
+        @include desktop{
+            margin-right: 40px;
         }
 }
 
 .connect__button {
-    margin-left: 40px;
-    /* font-family important! */
     color: $first-btn-color;
+    @include max-tablet{
+        margin-bottom: 20px;
+    }
 }

@@ -10,7 +10,7 @@
 }
 
 .footer__text {
- @include fonts(600, 11, 1.36, 0.2);
+ @include fonts(600, 11, 1.36);
   color: #9da4bd;
 }
 
@@ -23,14 +23,14 @@
         content: '';
         width: 60px;
         height: 1px;
-
         background-color: currentColor;
     }
 }
 .footer__link {
-    @include fonts(600, 11, 1.36, 0.2);
+    @include fonts(600, 11, 1.36);
     color: $secondary-title-color;
-    transition: color 300ms linear;
+    @include transition ();
+    transition-property: color, background-color;
       &:focus,
       &:hover {
         color: $accent-color;

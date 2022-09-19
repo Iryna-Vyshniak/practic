@@ -19,7 +19,8 @@
     justify-content: center;
     fill: #000000;
 
-    @include transition (fill 300ms linear, background-color 300ms linear);
+    @include transition ();
+    transition-property: fill, background-color;
     &:focus,
     &:hover {
         // background-color: #000000;
