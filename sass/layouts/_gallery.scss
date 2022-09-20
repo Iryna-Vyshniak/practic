@@ -4,12 +4,24 @@
 }
 
    .gallery__list {
+    @include tablet{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
         }
-        
+    }
     .gallery__item {
-            flex-basis: calc((100% - 90px) / 4);
+        width: 100%;
+        @include max-mobile {
+            &:not(:last-child){
+            margin-bottom: 30px;
         }
+    }
+        @include tablet{
+            @include flex-basis(2, 30px);
+        }
+        @include desktop{
+            @include flex-basis(4, 30px);
+        }
+    }

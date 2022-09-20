@@ -1,14 +1,33 @@
 .contacts {
   flex-basis: calc((100% - 30px) / 2);
+  @include desktop{
   padding-left: 100px;
+  }
 }
 
 .contacts__title {
-  margin-bottom: 40px;
-  color: $first-title-color;
+  margin-bottom: $title-margin;
+    color: $first-title-color;
+    text-align: center;
+  
+    @include tablet {
+      text-align: left;
+    }
 }
 .contacts__address {
   margin-bottom: 70px;
+  @include min-max-tablet {
+      @include flex-basis(2, 30px);
+    }
+  @include desktop{
+    margin-bottom: 70px;
+  }
+}
+
+.contacts__wrap-tablet{
+  @include min-max-tablet{
+    display: flex;
+  }
 }
 
 .contacts__address-map {
@@ -58,6 +77,24 @@
     margin-left: 44px
   }
 
+.contacts__timetable {
+@include min-max-tablet {
+  @include flex-basis(2, 30px);
+}
+}
+
+.contacts__subtitle {
+  margin-bottom: 20px;
+  @include fonts(600, 11, 1.36);
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.contacts__schedule {
+  margin-bottom: 0;
+  color: #9da4bd;
+}
 
 // .city{
 //   display: inline-block;
@@ -128,15 +165,3 @@
 
 
 
-.contacts__subtitle {
-  margin-bottom: 20px;
-  @include fonts(600, 11, 1.36);
-  text-transform: uppercase;
-
-  color: #ffffff;
-}
-
-.contacts__schedule {
-  margin-bottom: 0;
-  color: #9da4bd;
-}

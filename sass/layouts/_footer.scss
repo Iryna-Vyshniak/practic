@@ -5,16 +5,27 @@
 
 .footer__container {
   display: flex;
+  @include max-mobile{
+  flex-direction: column-reverse;
+  }
+  @include tablet{
   justify-content: space-between;
   align-items: center;
+  }
 }
 
 .footer__text {
+  @include max-mobile{
+  align-self: flex-start;
+  }
  @include fonts(600, 11, 1.36);
   color: #9da4bd;
 }
 
 .footer__list {
+  @include max-mobile {
+      align-self: flex-start;
+    }
   display: flex;
   margin-left: auto;
   align-items: center;

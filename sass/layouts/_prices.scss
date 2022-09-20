@@ -1,10 +1,25 @@
 .prices {
     max-width: 1600px;
     margin: 0 auto;
-    background-color: rgba(17, 19, 25, 1);
-    background-image: url(../img/prices.png);
+    background-color: $prices-bg-color;
+    background-image: url(../img/prices/prices-bg-mob-min.png);
     background-repeat: no-repeat;
     background-size: cover;
+    @include retina {
+        background-image: url(../img/prices/prices-bg-mob@2x-min.png);
+    }
+    @include tablet {
+        background-image: url(../img/prices/prices-bg-tab-min.png);
+        @include retina {
+            background-image: url(../img/prices/prices-bg-tab@2x-min.png);
+        }
+    }
+    @include desktop {
+        background-image: url(../img/prices/prices-bg-desk-min.png);
+        @include retina {
+            background-image: url(../img/prices/prices-bg-desk@2x-min.png);
+        }
+    }
 }
 
 .prices__pre-title {
@@ -13,28 +28,48 @@
 
 .prices__title {
     margin-bottom: 44px;
-
+    @include fonts(700, 40, 1.2, 0.05em);
     color: $first-title-color;
+    @include tablet{
+        @include fonts(700, 42, 1.7, 0.05em);
+    }
 }
 
 .prices__wrap {
+    margin-bottom: 44px;
+    @include max-tablet{
+    background: $prices-list-first-bg;
+    padding: 30px 20px;
+    }
+    @include desktop {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 44px;
+}
 }
 
 .table-list {
-    width: calc((100% - 30px) / 2);
-    padding: 30px 20px;
+    @include max-tablet{
+    &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    @include desktop {
+        @include flex-basis(2, 30px);
     &:first-child {
-            background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+            background: $prices-list-first-bg;
         }
         &:last-child {
-            background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+            background: $prices-list-second-bg;
         }
+}
 }
 
 .table-list__item {
+    @include fonts(null, 14, 1.4);
+   
+    @include tablet{
+        @include fonts(null, 18, 1.7);
+    }
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -48,8 +83,8 @@
             flex-grow: 1;
             background: rgba(157, 164, 189, 0.12);
         }
-    &:last-child {
-        margin-bottom: 0;
+    &:not(:last-child) {
+        margin-bottom: 20px;
     }
 }
 

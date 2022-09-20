@@ -13,11 +13,11 @@
       rel="stylesheet"
     />
     <!-- animate -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
     <!-- css -->
     <link
       rel="stylesheet"
@@ -34,7 +34,6 @@
     <header class="header">
       <div class="container header__container">
         <a class="header__logo logo link" href="./index.html">
-          <!-- <img src="./img/icons/logo.svg" title="site logo" alt="site logo" width="#" height="#" /> -->
           <svg width="69" height="55">
             <use class="icon-logo" href="./img/icons/icons.svg#icon-logo"></use>
           </svg>
@@ -48,7 +47,7 @@
               <a class="navigation__link link" href="#prices">Services and prices</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link link" href="#barbers" href="#">Barbers</a>
+              <a class="navigation__link link" href="#barbers">Barbers</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link link" href="#contacts">Contacts</a>
@@ -69,8 +68,6 @@
             width="40"
             height="40"
             aria-label="Перемикач мобільного меню"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
           >
             <use class="mobile-menu__icon-burger" href="./img/icons/icons.svg#icon-burger"></use>
           </svg>
@@ -79,12 +76,7 @@
       <div class="mobile-menu is-hidden">
         <div class="mobile-menu__container">
           <div class="mobile-menu__top">
-            <button
-              type="button"
-              class="mobile-menu__button menu-close"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-            >
+            <button type="button" class="mobile-menu__button menu-close">
               <svg
                 class="mobile-menu__cross"
                 width="40"
@@ -114,7 +106,7 @@
           <div class="mobile-menu__bottom">
             <div class="mobile-menu__connect">
               <a class="mobile-menu__tel link" href="tel:+380441111111">+38 044 111 11 11</a>
-              <button class="btn btn--color-dark mobile-menu__btn" type="button" data-modal-open>
+              <button class="btn btn--color-dark mobile-menu__btn" type="button" data-mobile-open>
                 Online-booking
               </button>
             </div>
@@ -146,72 +138,90 @@
       </div>
     </header>
     <!-- MAIN -->
-    <!-- <main> -->
-    <section class="hero">
-      <div class="container hero__container">
-        <div class="social">
-          <ul class="social__list list">
-            <li class="social__item">
-              <a
-                class="social__link link"
-                href="./"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                aria-label="link to Instagram"
-                >Instagram</a
-              >
+    <main>
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="social">
+            <ul class="social__list list">
+              <li class="social__item">
+                <a
+                  class="social__link link"
+                  href="./"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="link to Instagram"
+                  >Instagram</a
+                >
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link link"
+                  href="./"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="link to Youtube"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="hero__content">
+            <p class="hero__pre-title pre-title pre-title--color-light">
+              A hair salon for men in Kyiv
+            </p>
+            <h1 class="hero__title">BarberShop</h1>
+            <p class="hero__after-title">
+              We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--About  -->
+      <section class="section about" id="about">
+        <div class="container about__container">
+          <!-- picture-list -->
+          <ul class="picture-list list">
+            <li class="picture-list__item item">
+              <picture>
+                <source
+                  srcset="./img/about/about-1-dt-min.jpg 1x, ./img/about/about-1-dt@2x-min.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./img/about/about-1-tab-min.jpg 1x, ./img/about/about-1-tab@2x-min.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="picture-list__img"
+                  src="./img/about/about-1-dt-min.jpg"
+                  title="haircuts"
+                  alt="haircuts"
+                  width="270"
+                />
+              </picture>
             </li>
-            <li class="social__item">
-              <a
-                class="social__link link"
-                href="./"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                aria-label="link to Youtube"
-                >Youtube</a
-              >
+            <li class="picture-list__item item">
+              <picture>
+                <source
+                  srcset="./img/about/about-2-dt-min.jpg 1x, ./img/about/about-2-dt@2x-min.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./img/about/about-2-tab-min.jpg 1x, ./img/about/about-2-tab@2x-min.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="picture-list__img"
+                  src="./img/about/about-2-dt-min.jpg"
+                  title="haircuts"
+                  alt="haircuts"
+                  width="270"
+                />
+              </picture>
             </li>
           </ul>
-        </div>
-        <div class="hero__content">
-          <p class="hero__pre-title pre-title pre-title--color-light">
-            A hair salon for men in Kyiv
-          </p>
-          <h1 class="hero__title">BarberShop</h1>
-          <p class="hero__after-title">
-            We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!--About  -->
-    <!-- <section class="section about" id="about">
-        <div class="container about__container"> -->
-    <!-- picture-list -->
-    <!-- <ul class="picture-list list">
-            <li class="picture-list__item item">
-              <img
-                class="picture-list__img"
-                src="./img/about-1.jpg"
-                title="haircuts"
-                alt="haircuts"
-                width="270"
-                height="445"
-              />
-            </li>
-            <li class="picture-list__item item">
-              <img
-                class="picture-list__img"
-                src="./img/about-2.jpg"
-                title="haircuts"
-                alt="haircuts"
-                width="270"
-                height="445"
-              />
-            </li>
-          </ul> -->
-    <!-- about__content -->
-    <!-- <div class="about__content">
+          <!-- about__content -->
+          <div class="about__content">
             <p class="about__pre-title pre-title pre-title--color-dark">About</p>
             <h2 class="about__title title">Best Barbershop in your city</h2>
             <p class="about__after-title">
@@ -226,9 +236,9 @@
             <button class="btn btn--color-dark" type="button">Online-booking</button>
           </div>
         </div>
-      </section> -->
-    <!-- Services and prices -->
-    <!-- <section class="section prices" id="prices">
+      </section>
+      <!-- Services and prices -->
+      <section class="section prices" id="prices">
         <div class="container prices__container">
           <p class="prices__pre-title pre-title pre-title--color-light">
             Spend your time with the best masters
@@ -275,9 +285,9 @@
           </div>
           <button class="btn btn--color-light prices__button" type="button">Online-booking</button>
         </div>
-      </section> -->
-    <!-- Old traditional school -->
-    <!-- <section class="section benefits">
+      </section>
+      <!-- Old traditional school -->
+      <section class="section benefits">
         <div class="container benefits__container">
           <ul class="benefits__list list">
             <li class="benefits__item">
@@ -308,16 +318,39 @@
             </p>
           </div>
         </div>
-      </section> -->
-    <!-- Our barbers -->
-    <!-- <section class="section barbers" id="barbers">
+      </section>
+      <!-- Our barbers -->
+      <section class="section barbers" id="barbers">
         <div class="container">
           <p class="barbers__pre-title pre-title">For true enjoyers of the atmosphere</p>
           <h2 class="barbers__title title" data-aos="flip-up">Our barbers</h2>
           <ul class="barbers__list list">
             <li class="barbers__item">
               <div class="barbers__thumb-overlay">
-                <img src="./img/barbers-1.jpg" alt="haircut" width="370" height="346" />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/barbers/john-desk-min.jpg    1x,
+                      ./img/barbers/john-desk@2x-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/barbers/john-tab-min.jpg 1x, ./img/barbers/john-tab@2x-min.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./img/barbers/john-mob-min.jpg 1x, ./img/barbers/john-mob@2x-min.jpg 2x"
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    class="picture-list__img"
+                    src="./img/barbers/john-desk-min.jpg"
+                    title="haircuts"
+                    alt="haircuts"
+                    width="370"
+                  />
+                </picture>
                 <p class="barbers__overlay">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur
                   expedita, dolores recusandae fugiat fugit? Maxime rerum repudiandae fugit, id
@@ -364,7 +397,36 @@
             </li>
             <li class="barbers__item">
               <div class="barbers__thumb-overlay">
-                <img src="./img/barbers-2.jpg" alt="haircut" width="370" height="346" />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/barbers/michele-desk-min.jpg    1x,
+                      ./img/barbers/michele-desk@2x-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/barbers/michele-tab-min.jpg    1x,
+                      ./img/barbers/michele-tab@2x-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/barbers/michele-mob-min.jpg    1x,
+                      ./img/barbers/michele-mob@2x-min.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    class="picture-list__img"
+                    src="./img/barbers/michele-desk-min.jpg"
+                    title="haircuts"
+                    alt="haircuts"
+                    width="370"
+                  />
+                </picture>
                 <p class="barbers__overlay">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur
                   expedita, dolores recusandae fugiat fugit? Maxime rerum repudiandae fugit, id
@@ -411,7 +473,30 @@
             </li>
             <li class="barbers__item">
               <div class="barbers__thumb-overlay">
-                <img src="./img/barbers-3.jpg" alt="haircut" width="370" height="346" />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/barbers/alan-desk-min.jpg    1x,
+                      ./img/barbers/alan-desk@2x-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/barbers/alan-tab-min.jpg 1x, ./img/barbers/alan-tab@2x-min.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./img/barbers/alan-mob-min.jpg 1x, ./img/barbers/alan-mob@2x-min.jpg 2x"
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    class="picture-list__img"
+                    src="./img/barbers/alan-desk-min.jpg"
+                    title="haircuts"
+                    alt="haircuts"
+                    width="370"
+                  />
+                </picture>
                 <p class="barbers__overlay">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur
                   expedita, dolores recusandae fugiat fugit? Maxime rerum repudiandae fugit, id
@@ -458,9 +543,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
-    <!-- gallery -->
-    <!-- <section class="section gallery">
+      </section>
+      <!-- gallery -->
+      <section class="section gallery">
         <div class="container gallery__container">
           <p class="gallery__pre-title pre-title pre-title--color-dark">
             In Latin, "barba" means "beard"
@@ -468,26 +553,142 @@
           <h2 class="vissually-hidden">Gallery</h2>
           <ul class="gallery__list list">
             <li class="gallery__item">
-              <img src="./img/barba-1.jpg" title="haircut" alt="haircut" width="270" height="360" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/gallery-desk-min.jpg    1x,
+                    ./img/gallery/gallery-desk@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-tab-min.jpg    1x,
+                    ./img/gallery/gallery-tab@2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-mob-min.jpg    1x,
+                    ./img/gallery/gallery-mob@2x-min.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="picture-list__img"
+                  src="./img/gallery/gallery-desk-min.jpg"
+                  title="haircuts"
+                  alt="haircuts"
+                  width="270"
+                />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img src="./img/barba-2.jpg" title="haircut" alt="haircut" width="270" height="360" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/gallery-2desk-min.jpg    1x,
+                    ./img/gallery/gallery-2desk@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-2tab-min.jpg    1x,
+                    ./img/gallery/gallery-2tab@2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-2mob-min.jpg    1x,
+                    ./img/gallery/gallery-2mob@2x-min.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="picture-list__img"
+                  src="./img/gallery/gallery-2desk-min.jpg"
+                  title="haircuts"
+                  alt="haircuts"
+                  width="270"
+                />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img src="./img/barba-3.jpg" title="haircut" alt="haircut" width="270" height="360" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/gallery-3desk-min.jpg    1x,
+                    ./img/gallery/gallery-3desk@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-3tab-min.jpg    1x,
+                    ./img/gallery/gallery-3tab@2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-3mob-min.jpg    1x,
+                    ./img/gallery/gallery-3mob@2x-min.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="picture-list__img"
+                  src="./img/gallery/gallery-3desk-min.jpg"
+                  title="haircuts"
+                  alt="haircuts"
+                  width="270"
+                />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img src="./img/barba-4.jpg" title="haircut" alt="haircut" width="270" height="360" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/gallery-4desk-min.jpg    1x,
+                    ./img/gallery/gallery-4desk@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-4tab-min.jpg    1x,
+                    ./img/gallery/gallery-4tab@2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-4mob-min.jpg    1x,
+                    ./img/gallery/gallery-4mob@2x-min.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="picture-list__img"
+                  src="./img/gallery/gallery-4desk-min.jpg"
+                  title="haircuts"
+                  alt="haircuts"
+                  width="270"
+                />
+              </picture>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
-    <!-- contacts -->
-    <!-- <div class="contact-wrap">
-        <div class="container wrap-container"> -->
-    <!-- booking -->
-    <!-- <section class="section online">
+      <!-- contacts -->
+      <div class="contact-wrap">
+        <div class="container wrap-container">
+          <!-- booking -->
+          <section class="section online">
             <h2 class="online__title title">Online-booking</h2>
             <form action="javascript:void(0);" autocomplete="off">
               <div class="input-wrap">
@@ -507,12 +708,11 @@
                 <div class="form__field">
                   <input
                     type="tel"
-                    id="user tel"
+                    id="user-tel"
                     class="form__input"
                     name="user-tel"
-                    autocomplete="tel-country-code"
-                    minlength="3"
                     placeholder="PHONE*"
+                    pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
                     required
                   />
                   <label for="user-tel" class="form__label"></label>
@@ -529,48 +729,52 @@
               </div>
               <button type="submit" class="btn btn--color-light">SEND</button>
             </form>
-          </section> -->
-    <!-- Contacts -->
-    <!-- <section class="section contacts" id="contacts">
+          </section>
+          <!-- Contacts -->
+          <section class="section contacts" id="contacts">
             <h2 class="contacts__title title">Contacts</h2>
-            <address class="contacts__address">
-              <a
-                class="contacts__address-map link"
-                href="https://www.google.com.ua/maps/place/Vasylkivska+St,+7,+Kyiv,+02000/@50.3958107,30.5036017,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4c8c951889799:0x58e0259a6e5b738d!8m2!3d50.3958107!4d30.5036017"
-              >
-                <svg class="contacts-icon" width="24" height="24">
-                  <use href="./img/icons/icons.svg#icon-map-pin"></use>
-                </svg>
-                st. Vasylkivska, 7 <br />
-                <span class="city">Kyiv, 08132</span>
-              </a>
-              <ul class="address-list list">
-                <li class="address-list__item address-list__item-tel">
-                  <a class="address-list__link link" href="tel:+38 0441111111">
-                    <svg class="contacts-icon" width="24" height="24">
-                      <use href="./img/icons/icons.svg#icon-phone"></use>
-                    </svg>
-                    +38 044 111 11 11</a
-                  >
-                </li>
-                <li class="address-list__item address-list__item-mail">
-                  <a class="address-list__link link" href="mailto:barbershop@email.com">
-                    <svg class="contacts-icon" width="24" height="24">
-                      <use href="./img/icons/icons.svg#icon-mail"></use>
-                    </svg>
-                    barbershop@email.com</a
-                  >
-                </li>
-              </ul>
-            </address>
-            <p class="contacts__subtitle pre-title pre-title--color-light">Working hours</p>
-            <p class="contacts__schedule">Every day from 9:00 to 22:00</p>
-          </section> -->
-    <!-- </div>
+            <div class="contacts__wrap-tablet">
+              <address class="contacts__address">
+                <a
+                  class="contacts__address-map link"
+                  href="https://www.google.com.ua/maps/place/Vasylkivska+St,+7,+Kyiv,+02000/@50.3958107,30.5036017,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4c8c951889799:0x58e0259a6e5b738d!8m2!3d50.3958107!4d30.5036017"
+                >
+                  <svg class="contacts-icon" width="24" height="24">
+                    <use href="./img/icons/icons.svg#icon-map-pin"></use>
+                  </svg>
+                  st. Vasylkivska, 7 <br />
+                  <span class="city">Kyiv, 08132</span>
+                </a>
+                <ul class="address-list list">
+                  <li class="address-list__item address-list__item-tel">
+                    <a class="address-list__link link" href="tel:+380441111111">
+                      <svg class="contacts-icon" width="24" height="24">
+                        <use href="./img/icons/icons.svg#icon-phone"></use>
+                      </svg>
+                      +38 044 111 11 11</a
+                    >
+                  </li>
+                  <li class="address-list__item address-list__item-mail">
+                    <a class="address-list__link link" href="mailto:barbershop@email.com">
+                      <svg class="contacts-icon" width="24" height="24">
+                        <use href="./img/icons/icons.svg#icon-mail"></use>
+                      </svg>
+                      barbershop@email.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+              <div class="contacts__timetable">
+                <p class="contacts__subtitle pre-title pre-title--color-light">Working hours</p>
+                <p class="contacts__schedule">Every day from 9:00 to 22:00</p>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-    </main> -->
+    </main>
     <!-- footer -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <p class="footer__text">&copy; Copyright 2020</p>
         <ul class="footer__list list">
@@ -596,7 +800,7 @@
           </li>
         </ul>
       </div>
-    </footer> -->
+    </footer>
     <!-- MODAL -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">

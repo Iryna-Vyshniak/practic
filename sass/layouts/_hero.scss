@@ -21,14 +21,14 @@
     background-image: $bg-gradient, url(../img/hero/hero-bg-mob-min.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    @media retina {
+    @include retina {
         background-image: $bg-gradient, url(../img/hero/hero-bg-mob@2x-min.jpg);
     }
 
     @include tablet {
         padding: 272px 31px 237px 119px;
         background-image: $bg-gradient, url(../img/hero/hero-bg-tab-min.jpg);
-        @media retina {
+        @include retina {
             background-image: $bg-gradient, url(../img/hero/hero-bg-tab@2x-min.jpg);
         }
     }
@@ -36,7 +36,7 @@
     @include desktop {
         padding: 272px 100px 208px 100px;
         background-image: $bg-gradient, url(../img/hero/hero-bg-dt-min.jpg);
-        @media retina {
+    @include retina {
             background-image: $bg-gradient, url(../img/hero/hero-bg-dt@2x-min.jpg);
         }
     }

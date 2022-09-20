@@ -7,16 +7,12 @@
   
   @include mobile {
     width: 480px;
-    background-color: violet;
   }
   @include tablet {
-    width: 720px;
-    background-color: blue;
+    width: 768px;
   }
   @include desktop {
     width: 1200px;
-
-    background-color: green;
   }
 
 }

@@ -48,6 +48,9 @@
     transition-property: opacity, visibility, transform;
       }
     }
+        @include tablet {
+          display: none;
+        }
 }
 
 .mobile-menu__container {

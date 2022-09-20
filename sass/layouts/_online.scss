@@ -1,37 +1,70 @@
 .contact-wrap {
-    background-color: #191c26;
-    background-image: url(../img/contacts-bg.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: calc(50% - 15px);
     max-width: 1600px;
     margin: 0 auto;
+    background-color:  $contacts-bg-color;
+    background-image: url(../img/contacts/contacts-bg-desk-min.png);
+    background-repeat: no-repeat;
+    @include max-tablet{
+        background-position: bottom;
+        background-size: 50% cover;
+        // background-size: calc(50% - 15px);
+    }
+    @include desktop{
+    background-position: right;
+    background-size: calc(50% - 15px);
+        }  
+    @include retina {
+        background-image: url(../img/contacts/contacts-bg-mob@2x-min.png);
+    }
+
+    @include tablet {
+        background-image: url(../img/contacts/contacts-bg-tab-min.png);
+        @include retina {
+            background-image: url(../img/contacts/contacts-bg-tab@2x-min.png);
+        }
+    }
+
+    @include desktop {
+        background-image: url(../img/contacts/contacts-bg-desk-min.png);
+        @include retina {
+            background-image: url(../img/contacts/contacts-bg-desk@2x-min.png);
+        }
+    }
 }
 
 .wrap-container {
+    @include desktop{
     display: flex;
     justify-content: space-between;
 }
+}
 
 .online {
-    flex-basis: calc((100% - 30px) / 2);
+    @include flex-basis(2, 30px);
     padding-left: 16px;
 }
 
 .online__title {
     margin-bottom: $title-margin;
     color: $first-title-color;
+    text-align: center;
+    @include tablet{
+        text-align: left;
+    }
 }
 
 .input-wrap {
+    margin-bottom: $title-margin;
+    @include tablet{
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-bottom: $title-margin;
+    }
 }
 
 .form__field {
-flex-basis: calc((100% - 1 * 30px) / 2);
+    margin-bottom: $title-margin;
+    @include flex-basis(2, 30px);
 }
 .form__input {
         width: 100%;
@@ -62,20 +95,21 @@ flex-basis: calc((100% - 1 * 30px) / 2);
 .form__textarea {
     width: 100%;
     min-height: 76px;
-    margin-bottom: $title-margin;
-    padding: 8px;
     resize: none;
     @include fonts (600, 11, 1.4, 0.1em);
     color: $first-title-color;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(157, 164, 189, 0.4);
     @include transition();
     transition-property: border-bottom-color;
         &:focus,
         &:hover {
             border-bottom-width: 1px;
-            border-bottom-style: solid; border-bottom-color: $first-title-color;
+            border-bottom-style: solid; 
+            border-bottom-color: $first-title-color;
         }
         &:focus::placeholder,
         &:hover::placeholder {
