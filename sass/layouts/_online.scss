@@ -1,42 +1,22 @@
 .contact-wrap {
     max-width: 1600px;
     margin: 0 auto;
-    background-color:  $contacts-bg-color;
+    background-color: $contacts-bg-color;
+    @include desktop {
     background-image: url(../img/contacts/contacts-bg-desk-min.png);
     background-repeat: no-repeat;
-    @include max-tablet{
-        background-position: bottom;
-        background-size: 50% cover;
-        // background-size: calc(50% - 15px);
-    }
-    @include desktop{
     background-position: right;
-    background-size: calc(50% - 15px);
-        }  
+    background-size: calc(50% - 15px);   
     @include retina {
-        background-image: url(../img/contacts/contacts-bg-mob@2x-min.png);
+        background-image: url(../img/contacts/contacts-bg-desk@2x-min.png);
     }
-
-    @include tablet {
-        background-image: url(../img/contacts/contacts-bg-tab-min.png);
-        @include retina {
-            background-image: url(../img/contacts/contacts-bg-tab@2x-min.png);
-        }
-    }
-
-    @include desktop {
-        background-image: url(../img/contacts/contacts-bg-desk-min.png);
-        @include retina {
-            background-image: url(../img/contacts/contacts-bg-desk@2x-min.png);
-        }
-    }
+         }
 }
 
 .wrap-container {
-    @include desktop{
-    display: flex;
-    justify-content: space-between;
-}
+    @include desktop {
+        display: flex;
+    }
 }
 
 .online {

@@ -1,9 +1,32 @@
+.contact__wrap-bg{
+  margin-left: 0;
+@include max-tablet {
+    background-color: $contacts-bg-color;
+    background-image: url(../img/contacts/contacts-bg-tab-min.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include retina {
+      background-image: url(../img/contacts/contacts-bg-tab@2x-min.png);
+    }
+  }
+
+  @include max-mobile {
+    background-image: url(../img/contacts/contacts-bg-mob-min.png);
+
+    @include retina {
+      background-image: url(../img/contacts/contacts-bg-mob@2x-min.png);
+    }
+  }
+}
+
 .contacts {
   flex-basis: calc((100% - 30px) / 2);
+  padding-left: 16px;
   @include desktop{
   padding-left: 100px;
   }
 }
+
 
 .contacts__title {
   margin-bottom: $title-margin;
