@@ -1425,8 +1425,9 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  width: 500px;
-  min-height: 500px;
+  max-width: 500px;
+  width: 100%;
+  min-height: 609px;
   padding: 40px;
   background-color: #fff;
   border-radius: 10px;
@@ -1434,6 +1435,13 @@ img {
   transition-duration: 300ms;
   transition-timing-function: linear;
   transition-property: min-height;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    width: 100%;
+    min-height: 581px;
+  }
 }
 
 .is-hidden {
@@ -1626,6 +1634,8 @@ img {
   align-items: center;
   color: #303030;
   font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: inherit;
   margin-bottom: 30px;
 }
 
