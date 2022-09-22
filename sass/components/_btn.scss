@@ -6,23 +6,32 @@
 
     font-family: inherit;
     @include fonts(600, 14, 1.29, 0.04em);
-    border: 2px solid transparent;
-    border-radius: 25px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $btn-light-border-color;
+    border-radius: 10px;
+    color: $dark-btn-color;
     background-color: transparent;
 
     @include transition ();
-    transition-property: color, background-color;
-    &:focus,
+    transition-property: color, border-color, background-color;
+
+    &:focus{
+        color: $light-btn-color; 
+        border-color: $btn-dark-border-color;
+    }
     &:hover {
-            background-color: $accent-color;
-            color: $first-title-color;
+            border-color: $btn-dark-border-color;
+            color: $dark-btn-color;
         }
 }
 
+
+
 .btn--color-light {
-    color: $first-btn-color;
+    background-color: $btn-light-bg-color;
 }
 .btn--color-dark {
-    color: $secondary-btn-color;
+    background-color: $btn-dark-bg-color;
 }
 
