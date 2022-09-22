@@ -1,13 +1,12 @@
 .btn {
-    min-width: 160px;
+    min-width: 134px;
     height: 40px;
     cursor: pointer;
     border: none;
 
     font-family: inherit;
-    @include fonts(600, 12, 1.36, 0.09em);
-    text-transform: uppercase;
-    border: 1px solid $accent-color;
+    @include fonts(600, 14, 1.29, 0.04em);
+    border: 2px solid transparent;
     border-radius: 25px;
     background-color: transparent;
 
