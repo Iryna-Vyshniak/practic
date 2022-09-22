@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barbershop</title>
+    <title>Ice-cream</title>
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Raleway:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@700&family=Seymour+One&display=swap"
       rel="stylesheet"
     />
     <!-- animate -->
@@ -19,13 +19,7 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
     <!-- css -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
@@ -33,33 +27,34 @@
     <!-- HEADER -->
     <header class="header">
       <div class="container header__container">
-        <a class="header__logo logo link" href="./index.html">
-          <svg width="69" height="55">
-            <use class="icon-logo" href="./img/icons/icons.svg#icon-logo"></use>
-          </svg>
-        </a>
         <nav class="navigation">
+          <a class="header__logo logo link" href="./index.html">
+            <svg width="60" height="65">
+              <use class="icon-logo" href="./img/icons/icons.svg#"></use>
+            </svg>
+          </a>
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a class="navigation__link link" href="#about">About</a>
+              <a class="navigation__link link" href="#home">Home</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link link" href="#prices">Services and prices</a>
+              <a class="navigation__link link" href="#about">How it’s made</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link link" href="#barbers">Barbers</a>
+              <a class="navigation__link link" href="#products">Our products</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link link" href="#contacts">Contacts</a>
+              <a class="navigation__link link" href="#contacts">Contact</a>
             </li>
           </ul>
         </nav>
-        <div class="header__connect connect">
-          <a class="connect__phone link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn--color-light connect__button" type="button" data-modal-open>
-            Online-booking
-          </button>
-        </div>
+
+        <button class="btn btn--color-yellow connect__button" type="button">
+          Buy now
+          <svg width="12" height="12">
+            <use class="icon-logo" href="./img/icons/icons.svg#"></use>
+          </svg>
+        </button>
 
         <!-- burger open-mobile-menu-->
         <button type="button" class="mobile-menu__button menu-open">
@@ -72,10 +67,17 @@
             <use class="mobile-menu__icon-burger" href="./img/icons/icons.svg#icon-burger"></use>
           </svg>
         </button>
-      </div>
-      <div class="mobile-menu is-hidden">
-        <div class="mobile-menu__container">
-          <div class="mobile-menu__top">
+
+        <!-- MOBILE-MENU -->
+        <div class="mobile-menu is-hidden">
+          <div class="mobile-menu__container">
+            <!-- logo -->
+            <a class="header__logo logo link" href="./index.html">
+              <svg width="40" height="37">
+                <use class="icon-logo" href="./img/icons/icons.svg#"></use>
+              </svg>
+            </a>
+            <!-- button menu close -->
             <button type="button" class="mobile-menu__button menu-close">
               <svg
                 class="mobile-menu__cross"
@@ -86,723 +88,549 @@
                 <use class="mobile-menu__icon-cross" href="./img/icons/icons.svg#icon-cross"></use>
               </svg>
             </button>
+            <!-- mobile-navigation -->
             <nav class="mobile-menu__navigation">
               <ul class="mobile-menu__list list">
                 <li class="mobile-menu__item">
-                  <a href="#about" class="mobile-menu__link link">About</a>
+                  <a href="#home" class="mobile-menu__link link">Home</a>
                 </li>
                 <li class="mobile-menu__item">
-                  <a href="#prices" class="mobile-menu__link link">Services and prices</a>
+                  <a href="#about" class="mobile-menu__link link">How it’s made?</a>
                 </li>
                 <li class="mobile-menu__item">
-                  <a href="#barbers" class="mobile-menu__link link">Barbers</a>
+                  <a href="#products" class="mobile-menu__link link">Our products</a>
                 </li>
                 <li class="mobile-menu__item">
-                  <a href="#contacts" class="mobile-menu__link link">Contacts</a>
+                  <a href="#contacts" class="mobile-menu__link link">Contact</a>
                 </li>
               </ul>
             </nav>
-          </div>
-          <div class="mobile-menu__bottom">
-            <div class="mobile-menu__connect">
-              <a class="mobile-menu__tel link" href="tel:+380441111111">+38 044 111 11 11</a>
-              <button class="btn btn--color-dark mobile-menu__btn" type="button" data-mobile-open>
-                Online-booking
-              </button>
-            </div>
 
-            <ul class="mobile-soc-list list">
-              <li class="mobile-soc-list__item">
-                <a
-                  class="mobile-soc-list__link link"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  aria-label="link to Instagram"
-                  >Instagram</a
-                >
-              </li>
-              <li class="mobile-soc-list__item">
-                <a
-                  class="mobile-soc-list__link link"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  aria-label="link to Youtube"
-                  >Youtube</a
-                >
-              </li>
-            </ul>
+            <!-- button yellow -->
+            <button class="btn btn--color-yellow connect__button" type="button">
+              Buy now
+              <svg width="12" height="12">
+                <use class="icon-logo" href="./img/icons/icons.svg#"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
     </header>
     <!-- MAIN -->
-    <main>
+    <main class="page-main">
+
+      <!-- HERO -->
       <section class="hero">
         <div class="container hero__container">
-          <div class="social">
-            <ul class="social__list list">
-              <li class="social__item">
-                <a
-                  class="social__link link"
-                  href="./"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  aria-label="link to Instagram"
-                  >Instagram</a
-                >
-              </li>
-              <li class="social__item">
-                <a
-                  class="social__link link"
-                  href="./"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  aria-label="link to Youtube"
-                  >Youtube</a
-                >
-              </li>
-            </ul>
+
+          <div class="hero__main-content">
+            <div class="hero__title-content">
+              <h1 class="hero__title">Ice cream made with passion</h1>
+
+              <!-- buttons or link???? -->
+              <div class="hero__buttons">
+                <a class="hero__button" href="#products">Products</a>
+                <a class="hero__button" href="#about">How it’s made?</a>
+              </div>
+            </div>
+
+            <!-- amount cafes -->
+            <div class="hero__amount">
+              <p class="hero__txt16">16</p>
+              <p class="hero__txt-cafes">cafes</p>
+
+              <p class="hero__txt23">23</p>
+              <p class="hero__txt-food">food trucks</p>
+            </div>
+
           </div>
-          <div class="hero__content">
-            <p class="hero__pre-title pre-title pre-title--color-light">
-              A hair salon for men in Kyiv
-            </p>
-            <h1 class="hero__title">BarberShop</h1>
+
+          <!-- advertisement -->
+          <div class="hero__ad">
             <p class="hero__after-title">
-              We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+              Ice cream is cheaper than therapy for stress. Simple Pleasure. Taste It. Experience
+              It. Ice Cream Shop? Yes, please.
             </p>
+            <!-- button or link??? -->
+            <button class="hero__milk-btn" type="button">
+              <svg class="hero-list__icon" width="8" height="8">
+                <use href="./img/icons/icons.svg#arrow"></use>
+              </svg>
+            </button>
           </div>
+
+
         </div>
       </section>
-      <!--About  -->
-      <section class="section about" id="about">
+
+      <!-- PRODUCTS  -->
+      <section class="section" id="products">
+        <div class="container products__container">
+
+          <span class="section-name__label">100% natural</span>
+          <h2 class="section-name__title" id="our-products">products</h2>
+
+          <!-- products-list -->
+          <ul class="products-set">
+            <li class="products-set__item">
+              <h3 class="products__title">ice cream</h3>
+              <p class="products__descr">
+                Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural
+                stabilizer
+              </p>
+<!-- button for modal chocolate ice-cream -->
+              <button class="arrow" type="button">
+                <svg class="products__icon" width="40" height="0" >
+                    <use href="./img/icons/icons.svg#arrow"></use>
+                  </svg>
+                </svg>
+              </button>
+
+
+            </li>
+
+            
+            <li class="products-set__item">
+              <h3 class="products__title">ice coffee</h3>
+              <p class="products__descr">
+                Fragrant invigorating drink created from 100% natural ingredients without the use of
+                preservatives and flavor enhancers
+              </p>
+              <button class="arrow" type="button">
+                <svg class="products__icon" width="40" height="0" >
+                    <use href="/img/icons/icons.svg#arrow"></use>
+                  </svg>
+                </svg>
+              </button>
+            </li>
+            <li class="products-set__item">
+              <h3 class="products__title">milkshakes</h3>
+              <p class="products__descr">
+                Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries
+                and other sweets of your choice
+              </p>
+             <button class="arrow" type="button">
+                <svg class="products__icon" width="40" height="0" >
+                    <use href="./img/icons/icons.svg#arrow"></use>
+                  </svg>
+                </svg>
+              </button> 
+        </div>
+      </section>
+
+      <!-- ABOUT  how it’s made?-->
+      <section class="section about" id="prices">
         <div class="container about__container">
-          <!-- picture-list -->
-          <ul class="picture-list list">
-            <li class="picture-list__item item">
-              <picture>
-                <source
-                  srcset="./img/about/about-1-dt-min.jpg 1x, ./img/about/about-1-dt@2x-min.jpg 2x"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="./img/about/about-1-tab-min.jpg 1x, ./img/about/about-1-tab@2x-min.jpg 2x"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  class="picture-list__img"
-                  src="./img/about/about-1-dt-min.jpg"
-                  title="haircuts"
-                  alt="haircuts"
-                  width="270"
-                />
-              </picture>
-            </li>
-            <li class="picture-list__item item">
-              <picture>
-                <source
-                  srcset="./img/about/about-2-dt-min.jpg 1x, ./img/about/about-2-dt@2x-min.jpg 2x"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="./img/about/about-2-tab-min.jpg 1x, ./img/about/about-2-tab@2x-min.jpg 2x"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  class="picture-list__img"
-                  src="./img/about/about-2-dt-min.jpg"
-                  title="haircuts"
-                  alt="haircuts"
-                  width="270"
-                />
-              </picture>
-            </li>
-          </ul>
-          <!-- about__content -->
-          <div class="about__content">
-            <p class="about__pre-title pre-title pre-title--color-dark">About</p>
-            <h2 class="about__title title">Best Barbershop in your city</h2>
-            <p class="about__after-title">
-              If you want to add more confidence to your image, you should definitely visit us.
+          <p class="about__label">
+            tradition and love
+          </p>
+         <h2 class="about__title">how it’s made?</h2>
+
+
+         <img src="./img/about/" alt="cow" title="cow" />
+          <div class="about__main-text">
+            <p class="about__pre-text">
+              Ice is a place where you will become not only a little happier, but also healthier. Health is the main value for us, and we follow it when creating our handmade desserts. 
             </p>
             <p class="about__text">
-              We are a team that never stops at what has been achieved and are thirsty for changes.
-              And when you fall into the hands of our master, you will never be the same again. We
-              are a team that is always "on the same wave" with clients. Therefore, we are always
-              ready to improve everyone who comes to us!
+             We use traditional recipes and 100% natural ingredients. Our products are so natural that they can be given to children from the age of three years. Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes. 
             </p>
-            <button class="btn btn--color-dark" type="button">Online-booking</button>
-          </div>
+            <p class="about__last-text">
+              This is enough to choose ice cream and coffee for any mood!
+            </p>
+            </div>
+            <button type="submit" class="about__btn">
+              Read more<svg class="about-btn-icon" width="7" height="9">
+                <use
+                  href="./img/icons/icons.svg#arrow"
+                ></use>
+              </svg>
+            </button>
         </div>
-      </section>
-      <!-- Services and prices -->
-      <section class="section prices" id="prices">
-        <div class="container prices__container">
-          <p class="prices__pre-title pre-title pre-title--color-light">
-            Spend your time with the best masters
-          </p>
-          <h2 class="prices__title title">Services and prices</h2>
-          <div class="prices__wrap">
-            <ul class="table-list list">
-              <li class="table-list__item">
-                <p class="table-list__item-text">Men`s haircut</p>
-                <p class="table-list__item-text">from 300uah.</p>
-              </li>
-              <li class="table-list__item">
-                <p class="table-list__item-text">Beard trim</p>
-                <p class="table-list__item-text">from 300uah.</p>
-              </li>
-              <li class="table-list__item">
-                <p class="table-list__item-text">Mustache trim</p>
-                <p class="table-list__item-text">from 200uah.</p>
-              </li>
-              <li class="table-list__item">
-                <p class="table-list__item-text">Straight razor shave</p>
-                <p class="table-list__item-text">from 200uah.</p>
-              </li>
-            </ul>
 
-            <ul class="table-list list">
-              <li class="table-list__item">
-                <p class="table-list__item-text">Trainee`s haircut</p>
-                <p class="table-list__item-text">from 50uah.</p>
-              </li>
-              <li class="table-list__item">
-                <p class="table-list__item-text">Haircut under the nozzle</p>
-                <p class="table-list__item-text">from 200uah.</p>
-              </li>
-              <li class="table-list__item">
-                <p class="table-list__item-text">Children’s haircut (0-12 y.o.)</p>
-                <p class="table-list__item-text">from 300uah.</p>
-              </li>
-              <li class="table-list__item">
-                <p class="table-list__item-text">Camouflage of gray hair</p>
-                <p class="table-list__item-text">from 200uah.</p>
-              </li>
-            </ul>
-          </div>
-          <button class="btn btn--color-light prices__button" type="button">Online-booking</button>
+        <!-- MODAL READ MORE -->
+       <div class="backdrop is-hidden" modal-about="">
+        <div class="modal">
+          <button class="modal-close-btn" type="button" about-close-btn="">
+            <svg class="modal__close-icon" width="" height="">
+              <use href="./img/icons/icon.svg#"></use>  
+            </svg>
+          </button>
+          
+<div class="modal__content">
+  <p class="modal-title">How it’s made?</p>
+              <video controls muted loop preload="auto" class="modal__video">
+                <source type="video/webm" src="./img/about/#.webp" />
+                <source type="video/mp4" src="./img/about/#.mp4" />
+              </video>
+                <p class="modal__text">   
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                </p>
+              </div>
         </div>
+      </div>
+
       </section>
-      <!-- Old traditional school -->
-      <section class="section benefits">
-        <div class="container benefits__container">
-          <ul class="benefits__list list">
-            <li class="benefits__item">
-              <span>600</span>
-              <p class="benefits__item-text">Satisfied customers per day</p>
-            </li>
-            <li class="benefits__item">
-              <span>50</span>
-              <p class="benefits__item-text">Awards for excellent service.</p>
-            </li>
-            <li class="benefits__item">
-              <span>20</span>
-              <p class="benefits__item-text">Kyiv’s best barbers</p>
-            </li>
-            <li class="benefits__item">
-              <span>100</span>
-              <p class="benefits__item-text">Gifts for regular customers</p>
-            </li>
-          </ul>
-          <div class="benefits__content">
-            <p class="benefits__pre-title pre-title pre-title--color-dark">
-              Old traditional school
+      <!-- ADVANTAGES -->
+      <section class="advantages">
+      <div class="container advantages__container">
+        <h2 class="vissually-hidden">Ingridients</h2>
+        <ul class="advantages-set list">
+          <li class="advantages-set__item">
+            <span class="advantages-set__number">721</span>
+            <p class="advantages-set__text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+          </li>
+          <li class="advantages-set__item">
+            <span class="advantages-set__number">16kg</span>
+            <p class="advantages-set__text">
+             Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
             </p>
-            <h2 class="benefits__title title">¿Why people come to us?</h2>
-            <p class="benefits__after-title">
-              Only good things are said about us. But it's better to see and feel 1 time than read
-              10 times.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- Our barbers -->
-      <section class="section barbers" id="barbers">
-        <div class="container">
-          <p class="barbers__pre-title pre-title">For true enjoyers of the atmosphere</p>
-          <h2 class="barbers__title title" data-aos="flip-up">Our barbers</h2>
-          <ul class="barbers__list list">
-            <li class="barbers__item">
-              <div class="barbers__thumb-overlay">
-                <picture>
-                  <source
-                    srcset="
-                      ./img/barbers/john-desk-min.jpg    1x,
-                      ./img/barbers/john-desk@2x-min.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="./img/barbers/john-tab-min.jpg 1x, ./img/barbers/john-tab@2x-min.jpg 2x"
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="./img/barbers/john-mob-min.jpg 1x, ./img/barbers/john-mob@2x-min.jpg 2x"
-                    media="(min-width: 320px)"
-                  />
-                  <img
-                    class="picture-list__img"
-                    src="./img/barbers/john-desk-min.jpg"
-                    title="haircuts"
-                    alt="haircuts"
-                    width="370"
-                  />
-                </picture>
-                <p class="barbers__overlay">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur
-                  expedita, dolores recusandae fugiat fugit? Maxime rerum repudiandae fugit, id
-                  magnam ex ducimus laborum voluptas labore, exercitationem, est itaque totam? Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur
-                  expedita, dolores recusandae fugiat fugit? Maxime rerum repudiandae fugit, id
-                  magnam ex ducimus laborum voluptas labore, exercitationem, est itaque totam?
-                </p>
-              </div>
-              <div class="barbers__content">
-                <h3 class="barbers__item-title">John Smith</h3>
-                <p class="barbers__item-text">Extreme Barber</p>
-                <ul class="sns-list list">
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link">
-                      <svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link">
-                      <svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link">
-                      <svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link"
-                      ><svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="barbers__item">
-              <div class="barbers__thumb-overlay">
-                <picture>
-                  <source
-                    srcset="
-                      ./img/barbers/michele-desk-min.jpg    1x,
-                      ./img/barbers/michele-desk@2x-min.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./img/barbers/michele-tab-min.jpg    1x,
-                      ./img/barbers/michele-tab@2x-min.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./img/barbers/michele-mob-min.jpg    1x,
-                      ./img/barbers/michele-mob@2x-min.jpg 2x
-                    "
-                    media="(min-width: 320px)"
-                  />
-                  <img
-                    class="picture-list__img"
-                    src="./img/barbers/michele-desk-min.jpg"
-                    title="haircuts"
-                    alt="haircuts"
-                    width="370"
-                  />
-                </picture>
-                <p class="barbers__overlay">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur
-                  expedita, dolores recusandae fugiat fugit? Maxime rerum repudiandae fugit, id
-                  magnam ex ducimus laborum voluptas labore, exercitationem, est itaque totam? Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur
-                  expedita, dolores recusandae fugiat fugit? Maxime rerum repudiandae fugit, id
-                  magnam ex ducimus laborum voluptas labore, exercitationem, est itaque totam?
-                </p>
-              </div>
-              <div class="barbers__content">
-                <h3 class="barbers__item-title">Michele Doe</h3>
-                <p class="barbers__item-text">Extreme Barber</p>
-                <ul class="sns-list list">
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link">
-                      <svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link">
-                      <svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link">
-                      <svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link">
-                      <svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="barbers__item">
-              <div class="barbers__thumb-overlay">
-                <picture>
-                  <source
-                    srcset="
-                      ./img/barbers/alan-desk-min.jpg    1x,
-                      ./img/barbers/alan-desk@2x-min.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="./img/barbers/alan-tab-min.jpg 1x, ./img/barbers/alan-tab@2x-min.jpg 2x"
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="./img/barbers/alan-mob-min.jpg 1x, ./img/barbers/alan-mob@2x-min.jpg 2x"
-                    media="(min-width: 320px)"
-                  />
-                  <img
-                    class="picture-list__img"
-                    src="./img/barbers/alan-desk-min.jpg"
-                    title="haircuts"
-                    alt="haircuts"
-                    width="370"
-                  />
-                </picture>
-                <p class="barbers__overlay">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur
-                  expedita, dolores recusandae fugiat fugit? Maxime rerum repudiandae fugit, id
-                  magnam ex ducimus laborum voluptas labore, exercitationem, est itaque totam? Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur
-                  expedita, dolores recusandae fugiat fugit? Maxime rerum repudiandae fugit, id
-                  magnam ex ducimus laborum voluptas labore, exercitationem, est itaque totam?
-                </p>
-              </div>
-              <div class="barbers__content">
-                <h3 class="barbers__item-title">Alan Black</h3>
-                <p class="barbers__item-text">Extreme Barber</p>
-                <ul class="sns-list list">
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link">
-                      <svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link">
-                      <svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link">
-                      <svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="sns-list__item">
-                    <a href="#" class="sns-list__link link">
-                      <svg class="sns-list__icon" width="20" height="20">
-                        <use href="./img/icons/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- gallery -->
+          </li>
+          <li class="advantages-set__item">
+            <span class="advantages-set__number">84</span>
+            <p class="advantages-set__text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+      <!-- GALLERY-->
       <section class="section gallery">
         <div class="container gallery__container">
-          <p class="gallery__pre-title pre-title pre-title--color-dark">
-            In Latin, "barba" means "beard"
-          </p>
-          <h2 class="vissually-hidden">Gallery</h2>
-          <ul class="gallery__list list">
-            <li class="gallery__item">
-              <picture>
-                <source
-                  srcset="
-                    ./img/gallery/gallery-desk-min.jpg    1x,
-                    ./img/gallery/gallery-desk@2x-min.jpg 2x
-                  "
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="
-                    ./img/gallery/gallery-tab-min.jpg    1x,
-                    ./img/gallery/gallery-tab@2x-min.jpg 2x
-                  "
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="
-                    ./img/gallery/gallery-mob-min.jpg    1x,
-                    ./img/gallery/gallery-mob@2x-min.jpg 2x
-                  "
-                  media="(min-width: 320px)"
-                />
-                <img
-                  class="picture-list__img"
-                  src="./img/gallery/gallery-desk-min.jpg"
-                  title="haircuts"
-                  alt="haircuts"
-                  width="270"
-                />
-              </picture>
-            </li>
-            <li class="gallery__item">
-              <picture>
-                <source
-                  srcset="
-                    ./img/gallery/gallery-2desk-min.jpg    1x,
-                    ./img/gallery/gallery-2desk@2x-min.jpg 2x
-                  "
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="
-                    ./img/gallery/gallery-2tab-min.jpg    1x,
-                    ./img/gallery/gallery-2tab@2x-min.jpg 2x
-                  "
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="
-                    ./img/gallery/gallery-2mob-min.jpg    1x,
-                    ./img/gallery/gallery-2mob@2x-min.jpg 2x
-                  "
-                  media="(min-width: 320px)"
-                />
-                <img
-                  class="picture-list__img"
-                  src="./img/gallery/gallery-2desk-min.jpg"
-                  title="haircuts"
-                  alt="haircuts"
-                  width="270"
-                />
-              </picture>
-            </li>
-            <li class="gallery__item">
-              <picture>
-                <source
-                  srcset="
-                    ./img/gallery/gallery-3desk-min.jpg    1x,
-                    ./img/gallery/gallery-3desk@2x-min.jpg 2x
-                  "
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="
-                    ./img/gallery/gallery-3tab-min.jpg    1x,
-                    ./img/gallery/gallery-3tab@2x-min.jpg 2x
-                  "
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="
-                    ./img/gallery/gallery-3mob-min.jpg    1x,
-                    ./img/gallery/gallery-3mob@2x-min.jpg 2x
-                  "
-                  media="(min-width: 320px)"
-                />
-                <img
-                  class="picture-list__img"
-                  src="./img/gallery/gallery-3desk-min.jpg"
-                  title="haircuts"
-                  alt="haircuts"
-                  width="270"
-                />
-              </picture>
-            </li>
-            <li class="gallery__item">
-              <picture>
-                <source
-                  srcset="
-                    ./img/gallery/gallery-4desk-min.jpg    1x,
-                    ./img/gallery/gallery-4desk@2x-min.jpg 2x
-                  "
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="
-                    ./img/gallery/gallery-4tab-min.jpg    1x,
-                    ./img/gallery/gallery-4tab@2x-min.jpg 2x
-                  "
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="
-                    ./img/gallery/gallery-4mob-min.jpg    1x,
-                    ./img/gallery/gallery-4mob@2x-min.jpg 2x
-                  "
-                  media="(min-width: 320px)"
-                />
-                <img
-                  class="picture-list__img"
-                  src="./img/gallery/gallery-4desk-min.jpg"
-                  title="haircuts"
-                  alt="haircuts"
-                  width="270"
-                />
-              </picture>
-            </li>
-          </ul>
+                <picture>
+                  <source
+                    srcset="
+                      ./img/gallery/      1x,
+                      ./img/gallery/ 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/gallery/ 1x, ./img/gallery/ 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./img/gallery/ 1x, ./img/gallery/ 2x"
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    class="gallery__img"
+                    src="./img/gallery/"
+                    title="ice-cream"
+                    alt="ice-cream"
+                    width=""
+                  />
+                </picture>
+        </div>
+      </section>
+      <!--Customer Reviews AVATAR-->
+      <section class="section reviews">
+        <div class="container reviews__container">
+          <h2 class="vissually-hidden">customer reviews</h2>
+        <ul class="reviews-set list slaider">
+          <li class="reviews-set__item">
+            <div class="reviews-set__avatar">
+             <picture>
+                  <source
+                    srcset="
+                      ./img/reviews/      1x,
+                      ./img/reviews/ 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/reviews/ 1x, ./img/reviews/ 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./img/reviews/ 1x, ./img/reviews/ 2x"
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    class="reviews__img"
+                    src="./img/reviews/"
+                    title="ice-cream"
+                    alt="ice-cream"
+                    width=""
+                  />
+                </picture>
+            </div>
+            <div class="reviews-set__thumb-text">
+                <p class="reviews-set__text">
+                  I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.
+                </p>
+            </div>
+    
+            <p class="reviews-set__name">Emily, Los Angeles</p>
+          </li>
+          <li class="reviews-set__item">
+            <div class="reviews-set__avatar">
+             <picture>
+                  <source
+                    srcset="
+                      ./img/reviews/      1x,
+                      ./img/reviews/ 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/reviews/ 1x, ./img/reviews/ 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./img/reviews/ 1x, ./img/reviews/ 2x"
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    class="reviews__img"
+                    src="./img/reviews/"
+                    title="ice-cream"
+                    alt="ice-cream"
+                    width=""
+                  />
+                </picture>
+            </div>
+            <div class="reviews-set__thumb-text">
+                <p class="reviews-set__text">
+                  I love eating popsicles on a hot day. Yours is always delicious. I recommend your cafe to everyone I know.
+                </p>
+            </div>
+    
+            <p class="reviews-set__name">Sam, Los Angeles</p>
+          </li>
+          <li class="reviews-set__item">
+            <div class="reviews-set__avatar">
+             <picture>
+                  <source
+                    srcset="
+                      ./img/reviews/      1x,
+                      ./img/reviews/ 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/reviews/ 1x, ./img/reviews/ 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./img/reviews/ 1x, ./img/reviews/ 2x"
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    class="reviews__img"
+                    src="./img/reviews/"
+                    title="ice-cream"
+                    alt="ice-cream"
+                    width=""
+                  />
+                </picture>
+            </div>
+            <div class="reviews-set__thumb-text">
+                <p class="reviews-set__text">
+                  Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like the excellent service - always served politely and quickly!
+                </p>
+            </div>
+    
+            <p class="reviews-set__name">Diana, Chicago</p>
+          </li>
+        </ul>
         </div>
       </section>
 
       <!-- contacts -->
-      <div class="contact-wrap">
-        <div class="container wrap-container">
-          <!-- booking -->
-          <section class="section online">
-            <h2 class="online__title title">Online-booking</h2>
-            <form action="javascript:void(0);" autocomplete="off">
-              <div class="input-wrap">
-                <div class="form__field">
-                  <input
-                    type="text"
-                    id="user-name"
-                    class="form__input"
-                    name="user-name"
-                    autocomplete="name"
-                    minlength="3"
-                    placeholder="NAME*"
-                    required
-                  />
-                  <label for="user-name" class="form__label"></label>
-                </div>
-                <div class="form__field">
-                  <input
-                    type="tel"
-                    id="user-tel"
-                    class="form__input"
-                    name="user-tel"
-                    placeholder="PHONE*"
-                    pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
-                    required
-                  />
-                  <label for="user-tel" class="form__label"></label>
-                </div>
-              </div>
-              <div class="form__field">
-                <textarea
-                  name="message"
-                  id="message"
-                  class="form__textarea"
-                  placeholder="MESSAGE"
-                ></textarea>
-                <label for="message" class="form__label"></label>
-              </div>
-              <button type="submit" class="btn btn--color-light">SEND</button>
-            </form>
-          </section>
-          <!-- Contacts -->
-          <div class="contact__wrap-bg">
-            <section class="section contacts" id="contacts">
-              <h2 class="contacts__title title">Contacts</h2>
-              <div class="contacts__wrap-tablet">
-                <address class="contacts__address">
-                  <a
-                    class="contacts__address-map link"
-                    href="https://www.google.com.ua/maps/place/Vasylkivska+St,+7,+Kyiv,+02000/@50.3958107,30.5036017,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4c8c951889799:0x58e0259a6e5b738d!8m2!3d50.3958107!4d30.5036017"
-                  >
-                    <svg class="contacts-icon" width="24" height="24">
-                      <use href="./img/icons/icons.svg#icon-map-pin"></use>
-                    </svg>
-                    st. Vasylkivska, 7 <br />
-                    <span class="city">Kyiv, 08132</span>
+      <section class="section contacts">
+      <div class="container contacts__container">
+        <h2 class="vissually-hidden" id="contacts">Contacts</h2>
+        <ul class="contacts-set list">
+          <li class="contacts-set__item">
+            <!-- LINK BUTTON ???? -->
+            <span class="cafe contacts-list__category">cafe</span>
+              <h2 class="contacts-list__title">Chicago</h2>
+               <a
+                    class="contacts__map link"
+                    href="https://goo.gl/maps/7ZzEnLNPcEW3156e6"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >10340 Ridgeland Ave, Chicago Ridge, IL 60415, USA
                   </a>
-                  <ul class="address-list list">
-                    <li class="address-list__item address-list__item-tel">
-                      <a class="address-list__link link" href="tel:+380441111111">
-                        <svg class="contacts-icon" width="24" height="24">
-                          <use href="./img/icons/icons.svg#icon-phone"></use>
-                        </svg>
-                        +38 044 111 11 11</a
-                      >
-                    </li>
-                    <li class="address-list__item address-list__item-mail">
-                      <a class="address-list__link link" href="mailto:barbershop@email.com">
-                        <svg class="contacts-icon" width="24" height="24">
-                          <use href="./img/icons/icons.svg#icon-mail"></use>
-                        </svg>
-                        barbershop@email.com</a
-                      >
-                    </li>
-                  </ul>
-                </address>
-                <div class="contacts__timetable">
-                  <p class="contacts__subtitle pre-title pre-title--color-light">Working hours</p>
-                  <p class="contacts__schedule">Every day from 9:00 to 22:00</p>
-                </div>
-              </div>
-            </section>
-          </div>
+              
+              <iframe
+                class="contacts-set__map"
+                src="https://goo.gl/maps/7ZzEnLNPcEW3156e6"
+                width="448"
+                height="260"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              
+              <div class="contacts-set__wrap">
+                <span class="contacts-set__days-open">Monday - Friday</span>
+                <!-- time or not???? -->
+                <span class="contacts-set__time"><time>06:00 AM</time>-<time>10:00 PM</time></span>
+            
+              <span class="contacts-set__days-open">Saturday - Sunday</span>
+              <span class="contacts-set__time"><time>08:00 AM</time>-<time>16:00 PM</time></span>
+               </div>
+
+              <address class="contacts-set__address">
+                <a href="tel:+610383766284 ">+61(0) 383 766 284 </a>
+                <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+              </address>
+           
+          </li>
+          
+<li class="contacts-set__item">
+            <!-- LINK BUTTON ???? -->
+            <span class="cafe contacts-list__category">FOOD TRUCK</span>
+              <h2 class="contacts-list__title">Los Angeles</h2>
+               <a
+                    class="contacts__map link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >1003 Manhattan Ave, Manhattan Beach, CA 90263, USA
+                  </a>
+              
+              <iframe
+                class="contacts-set__map"
+                src="#"
+                width="448"
+                height="260"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              
+              <div class="contacts-set__wrap">
+                <span class="contacts-set__days-open">Monday - Friday</span>
+                <!-- time or not???? -->
+                <span class="contacts-set__time"><time>06:00 AM</time>-<time>10:00 PM</time></span>
+            
+              <span class="contacts-set__days-open">Saturday - Sunday</span>
+              <span class="contacts-set__time"><time>08:00 AM</time>-<time>16:00 PM</time></span>
+               </div>
+
+              <address class="contacts-set__address">
+                <a href="tel:+610383766284 ">+61(0) 383 766 284 </a>
+                <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+              </address>
+           
+          </li>
+
+          <li class="contacts-set__item">
+            <!-- LINK BUTTON ???? -->
+            <span class="cafe contacts-list__category">cafe</span>
+              <h2 class="contacts-list__title">New York</h2>
+               <a
+                    class="contacts__map link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >726 Sterling Pl, Brooklyn, NY 11222, USA
+                  </a>
+              
+              <iframe
+                class="contacts-set__map"
+                src="https://goo.gl/maps/7ZzEnLNPcEW3156e6"
+                width="448"
+                height="260"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              
+              <div class="contacts-set__wrap">
+                <span class="contacts-set__days-open">Monday - Friday</span>
+                <!-- time or not???? -->
+                <span class="contacts-set__time"><time>06:00 AM</time>-<time>10:00 PM</time></span>
+            
+              <span class="contacts-set__days-open">Saturday - Sunday</span>
+              <span class="contacts-set__time"><time>08:00 AM</time>-<time>16:00 PM</time></span>
+               </div>
+
+              <address class="contacts-set__address">
+                <a href="tel:+610383766284 ">+61(0) 383 766 284 </a>
+                <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+              </address>
+           
+          </li>
+        </ul>
+
+        <div class="contacts__button-wrap">
+          <button type="submit" class="contacts__btn">
+              Our Locations
+              <svg class="contacts__btn-icon" width="12" height="12">
+                <use
+                  href="./img/icons/icons.svg#arrow"
+                ></use>
+              </svg>
+            </button>
+           <button type="submit" class="contacts__btn">
+               Franchise
+              <svg class="contacts__btn-icon" width="12" height="12">
+                <use
+                  href="./img/icons/icons.svg#arrow"
+                ></use>
+              </svg>
+            </button>
         </div>
       </div>
+    </section>
+        
     </main>
     <!-- footer -->
     <footer class="footer">
       <div class="container footer__container">
-        <p class="footer__text">&copy; Copyright 2020</p>
-        <ul class="footer__list list">
-          <li class="footer__item networks">
-            <a
-              class="footer__link link"
-              href="./"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              aria-label="link to Instagram"
-              >Instagram</a
-            >
-          </li>
-          <li class="footer__item networks">
-            <a
-              class="footer__link link"
-              href="./"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              aria-label="link to Youtube"
-              >Youtube</a
-            >
-          </li>
-        </ul>
+
+        <div class="footer__title">
+          <p class="footer__pre-title">HOMEMADE ICE CREAM MADE</p>
+          <p class="footer__title">WITH PASSION</p>
+        </div>
+
+        <div class="net">
+          <ul class="sns-list list">
+                  <li class="sns-list__item">
+                    <a href="#" class="sns-list__link link">
+                      <svg class="sns-list__icon" width="34" height="34">
+                        <use href="./img/icons/icons.svg#icon-github"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="sns-list__item">
+                    <a href="#" class="sns-list__link link">
+                      <svg class="sns-list__icon" width="34" height="34">
+                        <use href="./img/icons/icons.svg#icon-telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="sns-list__item">
+                    <a href="#" class="sns-list__link link">
+                      <svg class="sns-list__icon" width="34" height="34">
+                        <use href="./img/icons/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+          <div class="footer__tel">
+            <span class="footer__tel-title">Feel free to contact</span>
+            <a href="tel:+610383766284" class="footer__tel">+61 (0) 383 766 284</a>
+          </div>
+        </div>
+      </div>
+      <div class="ice__corp">
+        <p class="ice__corp-title">&copy; 2022 - IceCream. All Rights Reserved.</p>
       </div>
     </footer>
+
+
+
     <!-- MODAL -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">

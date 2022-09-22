@@ -1,27 +1,32 @@
-@import "./utils/vars";
-@import "./utils/mixin";
-@import "./utils/placeholder";
-@import "./utils/commons";
-@import "./utils/hidden";
 
+// BASE
+@import "./base/nullstyles";
+@import "./base/commons";
+
+// UTILS
+@import "./utils/vars";
+@import "./utils/hidden";
+@import "./utils/placeholder";
+@import "./utils/mixins";
+
+// COMPONENTS (modals / mobile-menu etc)
 @import "./components/container";
 @import "./components/section";
+@import "./components/modal";
+@import "./components/mob-menu";
 @import "./components/btn";
-@import "./components/social";
-@import "./components/pre-title";
-@import "./components/title";
 @import "./components/sns-list";
+@import "./components/title";
 
-@import "./layouts/header";
-@import "./layouts/mob-menu";
-@import "./layouts/hero";
-@import "./layouts/about";
-@import "./layouts/prices";
-@import "./layouts/benefits";
-@import "./layouts/barbers";
-@import "./layouts/gallery";
-@import "./layouts/online";
-@import "./layouts/contacts";
-@import "./layouts/footer";
+// LAYOUT(project section)
+@import "./layout/hero";
+@import "./layout/header";
+@import "./layout/products";
+@import "./layout/about";
+@import "./layout/advantages";
+@import "./layout/gallery";
+@import "./layout/customer-reviews";
+@import "./layout/contacts";
+@import "./layout/footer";
 
-@import "./layouts/modals";
+
