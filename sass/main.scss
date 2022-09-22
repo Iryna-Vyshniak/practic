@@ -6,27 +6,16 @@
 // UTILS
 @import "./utils/vars";
 @import "./utils/hidden";
-@import "./utils/placeholder";
 @import "./utils/mixins";
 
 // COMPONENTS (modals / mobile-menu etc)
 @import "./components/container";
 @import "./components/section";
 @import "./components/modal";
-@import "./components/mob-menu";
 @import "./components/btn";
-@import "./components/sns-list";
 @import "./components/title";
 
 // LAYOUT(project section)
-@import "./layout/hero";
-@import "./layout/header";
-@import "./layout/products";
-@import "./layout/about";
-@import "./layout/advantages";
-@import "./layout/gallery";
-@import "./layout/customer-reviews";
-@import "./layout/contacts";
-@import "./layout/footer";
+
 
 
